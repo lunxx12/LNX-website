@@ -210,7 +210,28 @@ h2.v::after{width:110px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .badge img.ph{width:100%;height:100%;object-fit:cover;border-radius:50%;background:none;padding:0}
 .badge img.lg{width:62%;height:auto;background:none;padding:0;border-radius:0}
-@media(prefers-reduced-motion:reduce){.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+
+/* v4: teléfono y división curva */
+.tilt{position:relative}
+.phone{position:absolute;left:-34px;bottom:-40px;width:172px;aspect-ratio:9/18.5;border-radius:26px;background:#0A0F24;border:3px solid #2A3566;box-shadow:0 30px 60px -20px #000,0 0 0 1px rgba(201,169,106,.35);padding:12px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;animation:fl3 7s ease-in-out infinite}
+@keyframes fl3{50%{transform:translateY(-10px)}}
+.phone::before{content:'';position:absolute;top:6px;left:50%;width:44px;height:5px;margin-left:-22px;border-radius:9px;background:#1B2347}
+.ph-top{display:flex;align-items:center;gap:6px;margin-top:10px;padding-bottom:8px;border-bottom:1px solid var(--line);font-size:10px;color:#fff}
+.ph-top i{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#F6E3B0,#8A6B2A)}
+.ph-top b{font-weight:600}.ph-top span{margin-left:auto;color:#25D366;font-size:9px}
+.ph-body{display:flex;flex-direction:column;gap:7px}
+.bub{opacity:0;max-width:88%;font-size:9.5px;line-height:1.35;padding:6px 9px;border-radius:10px;margin:0;animation:bub 12s ease infinite;animation-delay:var(--t)}
+.bub.l{background:#1B2347;color:var(--txt);border-top-left-radius:2px}
+.bub.r{background:#1F6B45;color:#fff;align-self:flex-end;border-top-right-radius:2px}
+.bub.ok{align-self:stretch;max-width:100%;background:rgba(201,169,106,.14);border:1px solid var(--gold);color:#fff;display:grid;grid-template-columns:auto 1fr;gap:0 6px;align-items:center}
+.bub.ok .msr{font-size:18px;color:var(--gold);grid-row:span 2}.bub.ok small{color:var(--mute);font-size:8.5px}
+@keyframes bub{0%{opacity:0;transform:translateY(8px)}5%,86%{opacity:1;transform:none}96%,100%{opacity:0}}
+.chip{position:absolute;width:46px;height:46px;border-radius:14px;background:rgba(23,31,66,.85);border:1px solid var(--line);backdrop-filter:blur(6px);display:grid;place-items:center;color:var(--gold);box-shadow:0 14px 30px -12px #000;animation:fl3 6s ease-in-out infinite}
+.chip.c1{right:-14px;top:-18px}.chip.c2{right:-22px;top:42%;animation-delay:-2s}.chip.c3{right:18%;bottom:-26px;animation-delay:-4s}.chip.c4{left:30%;top:-24px;animation-delay:-1s}
+@media(max-width:900px){.phone{left:8px;bottom:-30px;width:128px;border-radius:20px;padding:10px 8px}.bub{font-size:8px}.chip{display:none}.hero{padding-bottom:110px}}
+.wv{background:var(--mist);line-height:0;margin-top:-1px}
+.wv svg{display:block;width:100%;height:clamp(46px,7vw,100px)}
+@media(prefers-reduced-motion:reduce){.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -240,7 +261,9 @@ h2.v::after{width:110px}
   </div>
   <div class="tilt"><div class="frame">
     <video src="assets/lnx-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-  </div></div>
+  </div><div class="phone" aria-hidden="true"><div class="ph-top"><i></i><b>Tu negocio</b><span>en línea</span></div>
+<div class="ph-body"><p class="bub r" style="--t:.4s">Hola, quiero hacer un pedido</p><p class="bub l" style="--t:2s">¡Claro! ¿Qué te sirvo?</p><p class="bub r" style="--t:3.6s">2 tacos y una horchata</p><div class="bub ok" style="--t:5.4s"><span class="msr">check_circle</span>Pedido recibido<small>Listo en 20 min</small></div></div></div>
+<span class="chip c1" aria-hidden="true"><span class="msr">chat</span></span><span class="chip c2" aria-hidden="true"><span class="msr">qr_code_2</span></span><span class="chip c3" aria-hidden="true"><span class="msr">event_available</span></span><span class="chip c4" aria-hidden="true"><span class="msr">location_on</span></span></div>
 </div></section>
 
 <div class="facts"><div class="wrap"><ul>
@@ -251,6 +274,7 @@ h2.v::after{width:110px}
 </ul></div></div>
 <div class="mq" aria-hidden="true"><div class="mt"><div><span>Restaurantes</span><i class="cr"></i><span>Cafeterías</span><i class="cr"></i><span>Tiendas</span><i class="cr"></i><span>Ópticas</span><i class="cr"></i><span>Estéticas y barberías</span><i class="cr"></i><span>Talleres</span><i class="cr"></i><span>Consultorios</span><i class="cr"></i><span>Papelerías</span><i class="cr"></i></div><div><span>Restaurantes</span><i class="cr"></i><span>Cafeterías</span><i class="cr"></i><span>Tiendas</span><i class="cr"></i><span>Ópticas</span><i class="cr"></i><span>Estéticas y barberías</span><i class="cr"></i><span>Talleres</span><i class="cr"></i><span>Consultorios</span><i class="cr"></i><span>Papelerías</span><i class="cr"></i></div></div></div>
 
+<div class="wv" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#0E1430" d="M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48 V0 H0 Z"><animate attributeName="d" dur="12s" repeatCount="indefinite" values="M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48 V0 H0 Z;M0,50 C240,6 480,86 720,34 C960,2 1200,80 1440,30 V0 H0 Z;M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48 V0 H0 Z"/></path><path fill="none" stroke="#C9A96A" stroke-width="2" vector-effect="non-scaling-stroke" d="M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48"><animate attributeName="d" dur="12s" repeatCount="indefinite" values="M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48;M0,50 C240,6 480,86 720,34 C960,2 1200,80 1440,30;M0,28 C240,92 480,2 720,40 C960,78 1200,10 1440,48"/></path></svg></div>
 <section class="light why"><div class="wrap">
   <h2 class="rv">Tu negocio ya existe. Falta que se vea en internet.</h2>
   <div>
@@ -408,6 +432,7 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
  if(matchMedia('(hover:hover)').matches)hr.addEventListener('mousemove',function(e){var b=hr.getBoundingClientRect(),px=(e.clientX-b.left)/b.width-.5,py=(e.clientY-b.top)/b.height-.5;tl.style.transform='perspective(900px) rotateY('+px*7+'deg) rotateX('+(-py*7)+'deg)'});
  hr.addEventListener('mouseleave',function(){tl.style.transform=''});
 }
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){var wv=document.querySelector('.wv svg');if(wv&&wv.pauseAnimations)wv.pauseAnimations()}
 </script>
 </body>
 </html>
