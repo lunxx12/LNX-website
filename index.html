@@ -11,6 +11,10 @@
 <meta property="og:title" content="LNX | Software y presencia digital para negocios locales">
 <meta property="og:description" content="Páginas web, menús digitales y automatización por WhatsApp para negocios locales.">
 <meta property="og:image" content="https://lnx-website.vercel.app/assets/images/og-image.jpg"><!-- Cambia por una imagen 1200x630 propia -->
+<link rel="canonical" href="https://lnx-website.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:alt" content="Logo de LNX Digital Agency">
+<meta property="og:locale" content="es_MX">
 <meta property="og:url" content="https://lnx-website.vercel.app/">
 <link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -277,10 +281,72 @@ html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .her
 .lit::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .5s;background:radial-gradient(460px circle at var(--mx,50%) var(--my,50%),rgba(201,169,106,.14),rgba(201,169,106,.04) 45%,transparent 70%)}
 .lit:hover::before{opacity:1}
 .lit>.wrap{position:relative;z-index:1}
-@media(prefers-reduced-motion:reduce){.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+
+/* v7: menú píldora, rueda de servicios, titular con íconos, texto que se ilumina */
+header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-inset-top,0px));padding-top:0;background:none;border:0;box-shadow:none;backdrop-filter:none;pointer-events:none}
+.nav{pointer-events:auto;position:relative;max-width:980px;height:60px;padding:0 10px 0 22px;border-radius:99px;background:rgba(14,20,48,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:0 14px 40px -18px #000}
+.nav .btn{padding:9px 20px}
+.hero{padding-top:132px}
+@media(max-width:820px){.nav ul{border:1px solid var(--line);border-radius:20px;top:calc(100% + 8px)}.nav{margin:0 14px}}
+.wheel{position:relative;height:clamp(430px,60vw,620px);overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent);outline-offset:-4px;touch-action:pan-y}
+.wc{position:absolute;left:50%;top:50%;border-radius:18px;border:1px solid var(--line);padding:22px 24px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;font-family:inherit;transition:transform .85s cubic-bezier(.2,.7,.2,1),opacity .6s,box-shadow .4s}
+.wc.c0{background:linear-gradient(135deg,#EBD296,#B8944D);color:var(--night)}.wc.c1{background:linear-gradient(135deg,#27336B,#1B2450);border-color:#3F4C8C;color:#fff}.wc.c2{background:var(--mist);color:var(--ink)}
+.wc .n{position:absolute;top:14px;right:20px;font:700 2.4rem 'Space Grotesk';opacity:.25}
+.wc .msr{font-size:30px;margin-bottom:auto;align-self:flex-start}
+.wc b{font:700 1.3rem 'Space Grotesk'}.wc small{font-size:.85rem;opacity:.8;margin-top:4px;display:block;line-height:1.35}
+.wc.on{box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 2px var(--gold)}
+.wctl{position:absolute;right:6px;top:50%;transform:translateY(-50%);z-index:20;display:grid;gap:8px;justify-items:center;font:500 .8rem 'Space Grotesk';color:var(--mute)}
+.wctl button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(23,31,66,.85);color:var(--gold);cursor:pointer;display:grid;place-items:center;transition:background .2s}.wctl button:hover{background:var(--line)}
+@media(max-width:900px){.wheel{height:430px}}
+.pl{display:inline-grid;place-items:center;width:.82em;height:.66em;margin:0 .1em;vertical-align:.04em;border:2px solid var(--gold);border-radius:.28em;color:var(--gold);background:rgba(201,169,106,.1);animation:plp 3.6s ease-in-out infinite}
+.pl .msr{font-size:.46em}.pl .wi{width:.46em;height:.46em}
+@keyframes plp{50%{transform:translateY(-.06em) rotate(-4deg);box-shadow:0 0 24px rgba(201,169,106,.45)}}
+.rvw .w{opacity:.28;transition:opacity .35s}.rvw .w.on{opacity:1}
+.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+
+/* v8: teléfono producido y testimonios */
+.phone{aspect-ratio:auto;width:190px;left:-70px;bottom:-150px;padding:8px 10px 10px;gap:6px;border-radius:30px;background:linear-gradient(180deg,#0C1230,#080C20)}
+.phone::before{display:none}
+.pst{display:flex;justify-content:space-between;font:600 8.5px Inter;color:#fff;padding:2px 10px 0}
+.sg{display:flex;gap:2px;align-items:flex-end}.sg i{width:3px;background:#fff;border-radius:1px}.sg i:nth-child(1){height:4px}.sg i:nth-child(2){height:6px}.sg i:nth-child(3){height:8px}
+.phone .ph-top{margin-top:2px;padding:0 0 8px;gap:7px}
+.ph-top .av{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F6E3B0,#8A6B2A);flex:none}
+.ph-top div{display:grid;line-height:1.2}.ph-top b{font-size:10.5px}.ph-top em{font-style:normal;font-size:8.5px;color:#25D366}
+.ph-top .msr{margin-left:auto;font-size:15px;color:var(--gold)}
+.phone .ph-body{flex:1}
+.dchip{align-self:center;font-size:8px;color:var(--mute);background:#151C3F;border-radius:6px;padding:2px 8px}
+.phone .bub{font-size:9.5px;padding:6px 9px 4px}
+.bub:not(.ok):not(.pc) small{display:block;text-align:right;opacity:.6;font-size:7px;margin-top:2px}
+.bub.pc{align-self:stretch;max-width:100%;background:#fff;color:#12182F;padding:9px 10px;display:grid;gap:3px;font-size:9px}
+.bub.pc b{font:700 10px 'Space Grotesk';margin-bottom:2px}
+.bub.pc div:not(.tt){display:flex;justify-content:space-between;gap:8px;color:#4A5272}
+.bub.pc .tt{display:flex;justify-content:space-between;border-top:1px dashed #C3C9E0;margin-top:2px;padding-top:4px;font-weight:700}
+.bub.pc button{margin-top:6px;border:0;border-radius:7px;padding:6px;font:600 8.5px Inter;color:#0E1430;background:linear-gradient(135deg,#EBD296,#B8944D)}
+.pin{display:flex;align-items:center;justify-content:space-between;background:#151C3F;border-radius:99px;padding:5px 5px 5px 11px;font-size:8.5px;color:var(--mute)}
+.pin .msr{width:22px;height:22px;border-radius:50%;background:#25D366;color:#fff;font-size:13px;display:grid;place-items:center}
+.hero{padding-bottom:200px}
+@media(max-width:900px){.phone{width:190px;left:6px;bottom:-70px;zoom:.72}.hero{padding-bottom:140px}}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+.quotes blockquote{max-width:none;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--r);padding:26px 28px}
+.quotes blockquote p{font-size:1.12rem;line-height:1.5;max-width:none}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* v9: paquetes seleccionables y detalles */
+.skip{position:absolute;left:12px;top:-60px;z-index:300;background:var(--gold);color:var(--night);padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none}.skip:focus{top:12px}
+.fb{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.fb img{height:26px;width:auto}
+.plan{position:relative;transition:transform .3s,box-shadow .3s,opacity .7s,border-color .3s}
+.plan .sb{display:none;position:absolute;top:14px;right:14px;align-items:center;gap:4px;font-size:.8rem;font-weight:600;color:var(--gold-d)}.plan .sb .msr{font-size:18px}
+.plan.hot .sb{color:var(--gold)}
+.plan.sel{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,106,.55),0 24px 40px -24px rgba(14,20,48,.5)}
+.plan.sel .sb{display:inline-flex}
+.plan .rec{position:absolute;top:-13px;left:30px;background:linear-gradient(135deg,#EBD296,#B8944D);color:var(--night);font:600 .78rem Inter;border-radius:99px;padding:4px 14px}
+.plan.sel .rec{display:none}
+.plan.sel .pk{background:var(--gold);color:var(--night)}
+@media(prefers-reduced-motion:reduce){.pl{animation:none!important}.rvw .w{opacity:1}.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Saltar al contenido</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol></svg>
 <div class="splash" aria-hidden="true"><svg viewBox="0 0 200 200"><path class="sm" pathLength="1" d="M122.2 18.4 A86 86 0 1 0 154.9 161.7 A74 74 0 1 1 122.2 18.4 Z"/></svg></div>
 <div id="pg"></div>
@@ -300,17 +366,23 @@ html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .her
 <section class="hero"><canvas class="sky" aria-hidden="true"></canvas><div class="bm" id="bm" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3B0"/><stop offset=".5" stop-color="#C9A96A"/><stop offset="1" stop-color="#8A6B2A"/></linearGradient><mask id="mk"><rect width="200" height="200" fill="#fff"/><circle cx="130" cy="92" r="74" fill="#000"/></mask></defs><circle cx="95" cy="100" r="86" fill="url(#mg)" mask="url(#mk)"/></svg></div><div class="wrap">
   <div>
     <span class="tag in">Software y presencia digital para negocios locales</span>
-    <h1 class="in">Que tus clientes te encuentren, te escriban y te pidan.</h1>
+    <h1 class="in">Que tus clientes te <span class="pl" aria-hidden="true"><span class="msr">search</span></span> encuentren, te escriban <span class="pl" aria-hidden="true"><svg class="wi" viewBox="0 0 24 24"><use href="#wa"/></svg></span> y te pidan <span class="pl" aria-hidden="true"><span class="msr">shopping_bag</span></span></h1>
     <p class="sub in">Páginas web, menús digitales y sistemas de pedidos y citas para <span class="rot" id="rot">restaurantes</span>. Que te encuentren en Google, te escriban por WhatsApp y vendas más.</p>
     <div class="cta in">
-      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Cotizar por WhatsApp</a>
+      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%20%F0%9F%91%8B%0A%0AQuiero%20cotizar%20un%20proyecto%20para%20mi%20negocio." target="_blank" rel="noopener"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Cotizar por WhatsApp</a>
       <a class="btn s" href="#proyectos">Ver proyectos</a>
     </div>
   </div>
   <div class="tilt"><div class="frame">
-    <video src="assets/lnx-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-  </div><div class="phone" aria-hidden="true"><div class="ph-top"><i></i><b>Tu negocio</b><span>en línea</span></div>
-<div class="ph-body"><p class="bub r" style="--t:.4s">Hola, quiero hacer un pedido</p><p class="bub l" style="--t:2s">¡Claro! ¿Qué te sirvo?</p><p class="bub r" style="--t:3.6s">2 tacos y una horchata</p><div class="bub ok" style="--t:5.4s"><span class="msr">check_circle</span>Pedido recibido<small>Listo en 20 min</small></div></div></div>
+    <video src="assets/lnx-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="assets/images/og-image.jpg"></video>
+  </div><div class="phone" aria-hidden="true"><div class="pst"><span>9:41</span><span class="sg"><i></i><i></i><i></i></span></div>
+<div class="ph-top"><i class="av"></i><div><b>Tu negocio</b><em>en línea</em></div><span class="msr">verified</span></div>
+<div class="ph-body"><span class="dchip">Hoy</span>
+<p class="bub r" style="--t:.4s">Hola, quiero hacer un pedido<small>10:21 ✓✓</small></p>
+<p class="bub l" style="--t:1.8s">¡Claro! ¿Qué te sirvo?<small>10:21</small></p>
+<div class="bub pc" style="--t:3.2s"><b>Tu pedido</b><div><span>2 × Tacos al pastor</span><span>$70</span></div><div><span>1 × Horchata</span><span>$25</span></div><div class="tt"><span>Total</span><span>$95</span></div><button tabindex="-1">Confirmar pedido</button></div>
+<div class="bub ok" style="--t:5.6s"><span class="msr">check_circle</span>Pedido confirmado<small>Listo en 20 min</small></div></div>
+<div class="pin"><span>Escribe un mensaje</span><span class="msr">send</span></div></div>
 <span class="chip c1" aria-hidden="true"><span class="msr">chat</span></span><span class="chip c2" aria-hidden="true"><span class="msr">qr_code_2</span></span><span class="chip c3" aria-hidden="true"><span class="msr">event_available</span></span><span class="chip c4" aria-hidden="true"><span class="msr">location_on</span></span></div>
 </div></section>
 
@@ -333,9 +405,11 @@ html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .her
 </div></section>
 
 <section id="servicios"><div class="wrap">
-  <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Elige un servicio para ver qué incluye.</p></div>
+  <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Gira la rueda y elige un servicio para ver qué incluye.</p></div>
   <div class="svc">
-    <div class="orb" id="orb"><span class="ring" aria-hidden="true"></span><span class="beam" id="beam" aria-hidden="true"></span><div class="hub" aria-hidden="true"><span class="cr"></span><small>LNX</small></div><button class="node on" data-i="0" aria-pressed="true" style="--x:50.00%;--y:12.00%"><span class="ic"><span class="msr" aria-hidden="true">draw</span></span><span class="lb">Creación de marca</span></button><button class="node" data-i="1" aria-pressed="false" style="--x:76.87%;--y:23.13%"><span class="ic"><span class="msr" aria-hidden="true">web</span></span><span class="lb">Landing pages</span></button><button class="node" data-i="2" aria-pressed="false" style="--x:88.00%;--y:50.00%"><span class="ic"><span class="msr" aria-hidden="true">qr_code_2</span></span><span class="lb">QR personalizados</span></button><button class="node" data-i="3" aria-pressed="false" style="--x:76.87%;--y:76.87%"><span class="ic"><span class="msr" aria-hidden="true">storefront</span></span><span class="lb">Google Business</span></button><button class="node" data-i="4" aria-pressed="false" style="--x:50.00%;--y:88.00%"><span class="ic"><span class="msr" aria-hidden="true">restaurant_menu</span></span><span class="lb">Menús digitales</span></button><button class="node" data-i="5" aria-pressed="false" style="--x:23.13%;--y:76.87%"><span class="ic"><span class="msr" aria-hidden="true">shopping_bag</span></span><span class="lb">Pedidos por WhatsApp</span></button><button class="node" data-i="6" aria-pressed="false" style="--x:12.00%;--y:50.00%"><span class="ic"><span class="msr" aria-hidden="true">event_available</span></span><span class="lb">Citas y recordatorios</span></button><button class="node" data-i="7" aria-pressed="false" style="--x:23.13%;--y:23.13%"><span class="ic"><span class="msr" aria-hidden="true">smart_toy</span></span><span class="lb">Atención 24/7</span></button></div>
+    <div class="wheel" id="wheel" tabindex="0" aria-label="Servicios">
+      <div class="wctl"><button type="button" id="wup" aria-label="Servicio anterior"><span class="msr" aria-hidden="true">keyboard_arrow_up</span></button><span id="wct">01 / 08</span><button type="button" id="wdn" aria-label="Servicio siguiente"><span class="msr" aria-hidden="true">keyboard_arrow_down</span></button></div>
+    </div>
     <article class="det" id="det" aria-live="polite"></article>
   </div>
 </div></section>
@@ -363,28 +437,20 @@ html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .her
   <article class="proj rv">
     <div class="shot"><img src="assets/images/el-carboncito.png" alt="Landing page de El Carboncito" loading="lazy"></div>
     <div><p class="kind">Comida a domicilio</p><h3>El Carboncito</h3>
-      <p>Landing page enfocada en que el cliente pida: menú completo, pedido en 3 pasos, testimonios y preguntas frecuentes.</p>
-      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Pedido en 3 pasos</li><li><span class="msr" aria-hidden="true">check_circle</span>Testimonios y FAQ</li><li><span class="msr" aria-hidden="true">check_circle</span>Contacto directo por WhatsApp</li></ul></div>
+      <p>Sitio completo para un negocio de comida al carbón: menú con precios, botón "Pedir este" en cada platillo, cómo pedir en 3 pasos, ubicación con horarios y preguntas frecuentes.</p>
+      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Pedido por WhatsApp en cada platillo</li><li><span class="msr" aria-hidden="true">check_circle</span>Menú completo con precios</li><li><span class="msr" aria-hidden="true">check_circle</span>Ubicación, horarios y preguntas frecuentes</li></ul>
+      <p style="margin-top:18px"><a class="btn s" href="https://el-carboncito.vercel.app/" target="_blank" rel="noopener">Ver sitio</a></p></div>
   </article>
-  <blockquote class="rv"><p>Me encantó cómo quedó. Se ve muy padre y me ha facilitado muchísimo poder mostrarle mi negocio a los clientes.</p><footer>Katya, propietaria de El Carboncito</footer></blockquote>
+  <div class="quotes"><blockquote class="rv"><p>Me encantó cómo quedó. Se ve muy padre y me ha facilitado muchísimo poder mostrarle mi negocio a los clientes.</p><footer>Katya, propietaria de El Carboncito</footer></blockquote>
+  <blockquote class="rv"><p>Me gustó mucho el resultado, le dio identidad a la marca que quería crear y me ayudó a llevarlo al siguiente nivel.</p><footer>Marisol Luna, propietaria de Gelatinas Luna</footer></blockquote></div>
 </div></section>
 
 <section class="light" id="paquetes"><div class="wrap">
   <h2 class="rv">Paquetes</h2>
-  <p style="margin-top:12px">Elige un punto de partida. Te enviamos una cotización clara, sin costos escondidos.</p>
+  <p style="margin-top:12px">Toca "Elegir este paquete" y se agrega a tu cotización. Te respondemos con una propuesta clara, sin costos escondidos.</p>
   <!-- Agrega aquí tus precios, por ejemplo: <p class="who">Desde $X MXN</p> -->
-  <div class="rv plans">
-    <div class="rv plan"><h3>Presencia básica</h3><p class="who">Para empezar a existir en internet.</p><ul>
-      <li><span class="msr" aria-hidden="true">check</span>Landing page de una sección</li><li><span class="msr" aria-hidden="true">check</span>Botón de WhatsApp con mensaje armado</li><li><span class="msr" aria-hidden="true">check</span>Mapa y datos de contacto</li><li><span class="msr" aria-hidden="true">check</span>Dominio conectado</li></ul>
-      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
-    <div class="rv plan hot"><h3>Presencia completa</h3><p class="who">Para negocios que quieren más clientes.</p><ul>
-      <li><span class="msr" aria-hidden="true">check</span>Sitio completo con catálogo o menú</li><li><span class="msr" aria-hidden="true">check</span>Perfil de Google Business optimizado</li><li><span class="msr" aria-hidden="true">check</span>QR de reseñas y de menú</li><li><span class="msr" aria-hidden="true">check</span>Identidad visual básica</li></ul>
-      <a class="btn p" href="#contacto">Cotizar este paquete</a></div>
-    <div class="rv plan"><h3>Automatización</h3><p class="who">Para ahorrar tiempo y no perder citas.</p><ul>
-      <li><span class="msr" aria-hidden="true">check</span>Agenda de citas en línea</li><li><span class="msr" aria-hidden="true">check</span>Recordatorios por WhatsApp</li><li><span class="msr" aria-hidden="true">check</span>Respuestas automáticas a preguntas frecuentes</li><li><span class="msr" aria-hidden="true">check</span>Se cotiza según tu caso</li></ul>
-      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
-  </div>
-  <p style="margin-top:28px">Mantenimiento mensual opcional: actualizaciones de contenido, respaldo y soporte por WhatsApp.</p>
+  <div class="plans"><div class="rv plan" data-pkg="Presencia básica"><span class="sb"><span class="msr" aria-hidden="true">check_circle</span>Elegido</span><h3>Presencia básica</h3><p class="who">Para empezar a existir en internet.</p><ul><li><span class="msr" aria-hidden="true">check</span>Landing page de una sección</li><li><span class="msr" aria-hidden="true">check</span>Botón de WhatsApp con mensaje armado</li><li><span class="msr" aria-hidden="true">check</span>Mapa y datos de contacto</li><li><span class="msr" aria-hidden="true">check</span>Dominio conectado</li></ul><a class="btn s pk" href="#contacto" data-pkg="Presencia básica">Elegir este paquete</a></div><div class="rv plan hot" data-pkg="Presencia completa"><span class="sb"><span class="msr" aria-hidden="true">check_circle</span>Elegido</span><span class="rec">Recomendado</span><h3>Presencia completa</h3><p class="who">Para negocios que quieren más clientes.</p><ul><li><span class="msr" aria-hidden="true">check</span>Sitio completo con menú o catálogo</li><li><span class="msr" aria-hidden="true">check</span>Pedidos por WhatsApp</li><li><span class="msr" aria-hidden="true">check</span>Google Business optimizado</li><li><span class="msr" aria-hidden="true">check</span>QR personalizados (menú y reseñas)</li><li><span class="msr" aria-hidden="true">check</span>Identidad visual básica</li></ul><a class="btn p pk" href="#contacto" data-pkg="Presencia completa">Elegir este paquete</a></div><div class="rv plan" data-pkg="Automatización"><span class="sb"><span class="msr" aria-hidden="true">check_circle</span>Elegido</span><h3>Automatización</h3><p class="who">Para ahorrar tiempo y no perder citas.</p><ul><li><span class="msr" aria-hidden="true">check</span>Agenda de citas en línea</li><li><span class="msr" aria-hidden="true">check</span>Recordatorios por WhatsApp</li><li><span class="msr" aria-hidden="true">check</span>Atención automática 24/7</li><li><span class="msr" aria-hidden="true">check</span>Se suma a cualquier paquete</li><li><span class="msr" aria-hidden="true">check</span>Se cotiza según tu caso</li></ul><a class="btn s pk" href="#contacto" data-pkg="Automatización">Elegir este paquete</a></div></div>
+  <p style="margin-top:28px">Mantenimiento mensual opcional: actualizaciones de contenido, respaldo y soporte por WhatsApp. ¿Necesitas algo distinto? Elige servicios sueltos al <a href="#contacto" style="color:var(--ink);font-weight:600">cotizar</a>.</p>
 </div></section>
 
 <section class="about" id="nosotros"><div class="wrap">
@@ -418,26 +484,32 @@ html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .her
   </div>
   <form id="f">
     <label>Tu nombre<input name="n" required autocomplete="name"></label>
+    <label>Nombre de tu negocio<input name="b" autocomplete="organization"></label>
     <label>Tipo de negocio<select name="t"><option>Restaurante o cafetería</option><option>Tienda o comercio</option><option>Servicios (estética, taller, consultorio)</option><option>Otro</option></select></label>
-    <label>¿Qué necesitas?<textarea name="m" placeholder="Ej. una página con menú y pedidos por WhatsApp"></textarea></label>
+    <label>¿Qué te interesa?<select name="s" id="fs"><optgroup label="Paquetes"><option>Paquete Presencia básica</option><option>Paquete Presencia completa</option><option>Paquete Automatización</option></optgroup><optgroup label="Servicios por separado"><option>Creación de marca</option><option>Landing pages</option><option>QR personalizados</option><option>Google Business</option><option>Menús digitales</option><option>Pedidos por WhatsApp</option><option>Citas y recordatorios</option><option>Atención automática 24/7</option></optgroup><option selected>Aún no lo sé, quiero asesoría</option></select></label>
+    <label>Cuéntanos más (opcional)<textarea name="m" placeholder="Ej. quiero una página con menú y pedidos por WhatsApp"></textarea></label>
     <button class="btn p" type="submit"><span class="msr" aria-hidden="true">send</span>Enviar por WhatsApp</button>
-    <small>Se abrirá WhatsApp con tu mensaje listo para enviar.</small>
+    <small>Se abrirá WhatsApp con tu mensaje ordenado y listo para enviar.</small>
   </form>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <div>© 2026 LNX Digital Agency. Todos los derechos reservados.</div>
-  <nav><a href="terminos.html">Términos de servicio</a><a href="privacidad.html">Política de privacidad</a><a href="https://wa.me/523323507197">WhatsApp</a><!-- Agrega tus redes: Instagram, Facebook --></nav>
+  <div class="fb"><img src="assets/images/logo-lnx-nuevo.png" alt="LNX" height="26" onerror="this.style.display='none'"><span>© 2026 LNX Digital Agency. Todos los derechos reservados.</span></div>
+  <nav><a href="terminos.html">Términos de servicio</a><a href="privacidad.html">Política de privacidad</a><a href="#top">Volver arriba</a><a href="https://wa.me/523323507197">WhatsApp</a><!-- Agrega tus redes: Instagram, Facebook --></nav>
 </div></footer>
 
-<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
+<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%20%F0%9F%91%8B%0A%0AQuiero%20cotizar%20un%20proyecto%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
 
 <script>
 document.getElementById('f').addEventListener('submit',function(e){
-  e.preventDefault();var d=new FormData(this);
-  var t='Hola LNX, soy '+d.get('n')+'. Mi negocio es: '+d.get('t')+'.'+(d.get('m')?' Necesito: '+d.get('m'):'');
-  window.open('https://wa.me/523323507197?text='+encodeURIComponent(t),'_blank','noopener');
+  e.preventDefault();var d=new FormData(this),L=['👋 *Hola LNX, quiero cotizar un proyecto.*',''];
+  L.push('*Nombre:* '+d.get('n').trim());
+  if(d.get('b').trim())L.push('*Negocio:* '+d.get('b').trim());
+  L.push('*Tipo de negocio:* '+d.get('t'),'*Me interesa:* '+d.get('s'));
+  if(d.get('m').trim())L.push('','*Detalles:*',d.get('m').trim());
+  L.push('','_Enviado desde la página web de LNX_');
+  window.open('https://wa.me/523323507197?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
 });
 
 var h=document.querySelector('header'),pg=document.getElementById('pg');
@@ -468,14 +540,20 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
 }
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){var wv=document.querySelector('.wv svg');if(wv&&wv.pauseAnimations)wv.pauseAnimations()}
 
-(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],o=document.getElementById('orb'),d=document.getElementById('det'),b=document.getElementById('beam'),ns=o.querySelectorAll('.node'),cur=-90,t=null,u=false;
-function show(i,sw){var s=SV[i];ns.forEach(function(n,k){n.classList.toggle('on',k==i);n.setAttribute('aria-pressed',k==i)});
-var a=-90+i*45,dl=((a-cur+540)%360)-180;cur+=dl;b.style.setProperty('--a',cur+'deg');
-d.innerHTML='<div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p>'+s.d+'</p><ul>'+s.b.map(function(x){return '<li><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('Hola LNX, me interesa: '+s.t)+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
+(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],w=document.getElementById('wheel'),d=document.getElementById('det'),ct=document.getElementById('wct'),n=SV.length,act=0,u=false,t,cs=[];
+SV.forEach(function(s,i){var c=document.createElement('button');c.type='button';c.className='wc c'+(i%3);c.setAttribute('aria-label',s.t);c.innerHTML='<span class="n">0'+(i+1)+'</span><span class="msr" aria-hidden="true">'+s.i+'</span><b>'+s.t+'</b><small>'+s.p+'</small>';c.addEventListener('click',function(){go(i,true)});w.appendChild(c);cs.push(c)});
+function lay(){var cw=w.clientWidth,W=Math.min(430,cw*.72),H=W*.58,R=H*2.3;cs.forEach(function(c,i){var o=i-act;if(o>n/2)o-=n;if(o<-n/2)o+=n;var a=o*21,r=a*Math.PI/180,ab=Math.abs(o);
+c.style.width=W+'px';c.style.height=H+'px';c.style.opacity=ab>3?0:1-ab*.16;c.style.zIndex=10-ab;c.style.pointerEvents=ab>3?'none':'auto';
+c.style.transform='translate(-50%,-50%) translate('+(-R*(1-Math.cos(r)))+'px,'+(R*Math.sin(r))+'px) rotate('+a+'deg) scale('+(1-ab*.04)+')';c.classList.toggle('on',o===0);c.tabIndex=o===0?0:-1})}
+function show(sw){var s=SV[act];ct.textContent='0'+(act+1)+' / 0'+n;
+d.innerHTML='<div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p>'+s.d+'</p><ul>'+s.b.map(function(x){return '<li><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('👋 *Hola LNX*\n\nMe interesa el servicio de *'+s.t+'*.\n¿Me pueden dar más información y una cotización?')+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
 if(sw){d.classList.remove('sw');void d.offsetWidth;d.classList.add('sw')}}
-ns.forEach(function(n){n.addEventListener('click',function(){u=true;clearInterval(t);show(+n.dataset.i,true)})});
-show(0,false);var i=0;
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){if(u)return;i=(i+1)%SV.length;show(i,true)},6000);
+function go(i,usr){act=(i+n)%n;if(usr){u=true;clearInterval(t)}lay();show(true)}
+document.getElementById('wup').onclick=function(){go(act-1,true)};document.getElementById('wdn').onclick=function(){go(act+1,true)};
+w.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();go(act+1,true)}if(e.key==='ArrowUp'){e.preventDefault();go(act-1,true)}});
+var y0=null;w.addEventListener('pointerdown',function(e){y0=e.clientY});w.addEventListener('pointerup',function(e){if(y0!==null&&Math.abs(e.clientY-y0)>45)go(act+(e.clientY<y0?1:-1),true);y0=null});
+addEventListener('resize',lay);lay();show(false);
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){if(!u&&!w.matches(':hover'))go(act+1,false)},5000);
 })();
 var spy=document.querySelectorAll('.nav a.l'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)spy.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
 ['servicios','proyectos','paquetes','nosotros'].forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
@@ -488,6 +566,19 @@ if(matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:red
   s.addEventListener('mouseleave',function(){if(ac===s)ac=null})});
  (function f(){if(ac){cx+=(tx-cx)*.14;cy+=(ty-cy)*.14;ac.style.setProperty('--mx',cx+'px');ac.style.setProperty('--my',cy+'px')}requestAnimationFrame(f)})();
 }
+
+(function(){var ps=document.querySelectorAll('.about p');ps.forEach(function(p){p.classList.add('rvw');var tx=p.textContent.trim().split(/\s+/);p.setAttribute('aria-label',p.textContent.trim());p.innerHTML=tx.map(function(x){return '<span class="w" aria-hidden="true">'+x+'</span>'}).join(' ')});
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function up(){ps.forEach(function(p){var r=p.getBoundingClientRect(),v=innerHeight,pr=Math.min(1,Math.max(0,(v*.9-r.top)/(v*.5+r.height*.6))),ws=p.querySelectorAll('.w'),k=Math.round(pr*ws.length);ws.forEach(function(w,i){w.classList.toggle('on',rm||i<k)})})}
+addEventListener('scroll',up,{passive:true});addEventListener('resize',up);up()})();
+addEventListener('load',function(){if(window.Lenis&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var L=new Lenis({lerp:.1});(function r(t){L.raf(t);requestAnimationFrame(r)})();
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();L.scrollTo(id,{offset:-80})}})})}});
+
+(function(){var fs=document.getElementById('fs'),pl=document.querySelectorAll('.plan[data-pkg]');
+function mark(v){pl.forEach(function(p){var on='Paquete '+p.dataset.pkg===v;p.classList.toggle('sel',on);p.querySelector('.pk').textContent=on?'Paquete elegido':'Elegir este paquete'})}
+pl.forEach(function(p){p.querySelector('.pk').addEventListener('click',function(){fs.value='Paquete '+p.dataset.pkg;mark(fs.value)})});
+fs.addEventListener('change',function(){mark(fs.value)})})();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </body>
 </html>
