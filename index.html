@@ -1,313 +1,413 @@
-<!DOCTYPE html><html lang="es" class="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/geist-mono.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/geist.min.css"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-secondary-fixed-variant": "#474746",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "on-primary-container": "#636565",
-                    "tertiary-fixed-dim": "#c8c6c6",
-                    "on-tertiary-container": "#656464",
-                    "outline": "#8e9192",
-                    "surface-container-lowest": "#0e0e0e",
-                    "on-primary": "#2f3131",
-                    "surface-bright": "#393939",
-                    "on-surface-variant": "#c4c7c8",
-                    "inverse-on-surface": "#313030",
-                    "error": "#ffb4ab",
-                    "secondary": "#c8c6c5",
-                    "on-primary-fixed": "#1a1c1c",
-                    "on-error": "#690005",
-                    "surface": "#131313",
-                    "inverse-surface": "#e5e2e1",
-                    "secondary-fixed": "#e5e2e1",
-                    "primary-fixed": "#e2e2e2",
-                    "background": "#121212",
-                    "on-secondary": "#303030",
-                    "primary": "#ffffff",
-                    "on-surface": "#e5e2e1",
-                    "surface-dim": "#131313",
-                    "on-background": "#e5e2e1",
-                    "secondary-container": "#474746",
-                    "on-primary-fixed-variant": "#454747",
-                    "surface-container-low": "#1c1b1b",
-                    "surface-container": "#201f1f",
-                    "primary-container": "#e2e2e2",
-                    "surface-variant": "#353534",
-                    "on-tertiary-fixed": "#1b1c1c",
-                    "on-secondary-container": "#b7b5b4",
-                    "tertiary-container": "#e4e2e1",
-                    "tertiary": "#ffffff",
-                    "on-secondary-fixed": "#1b1b1c",
-                    "surface-container-high": "#2a2a2a",
-                    "on-tertiary-fixed-variant": "#474747",
-                    "surface-tint": "#c6c6c7",
-                    "inverse-primary": "#5d5f5f",
-                    "on-error-container": "#ffdad6",
-                    "on-tertiary": "#303030",
-                    "outline-variant": "#444748",
-                    "tertiary-fixed": "#e4e2e1",
-                    "surface-container-highest": "#353534",
-                    "error-container": "#93000a",
-                    "primary-fixed-dim": "#c6c6c7"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "margin-mobile": "16px",
-                    "container-max": "1280px",
-                    "stack-md": "16px",
-                    "base": "8px",
-                    "margin-desktop": "64px",
-                    "stack-sm": "4px",
-                    "stack-lg": "32px"
-            },
-            "fontFamily": {
-                    "headline-md": ["Geist"],
-                    "display-lg": ["Geist"],
-                    "body-lg": ["Geist"],
-                    "display-lg-mobile": ["Geist"],
-                    "body-md": ["Geist"],
-                    "label-sm": ["Geist"],
-                    "code-md": ["Geist Mono"]
-            },
-            "fontSize": {
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "code-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-background antialiased overflow-x-hidden">
-<!-- Header / TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-container-max mx-auto">
-<a href="#" class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">LNX</a>
-<nav class="hidden md:flex items-center gap-stack-lg">
-<a href="#" class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200">Inicio</a>
-<a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200">Portafolio</a>
-<a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200">Servicios</a>
-<a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200">Contacto</a>
-</nav>
-<button class="bg-primary text-background px-stack-lg py-2 rounded-full font-label-sm text-label-sm font-bold hover:opacity-80 transition-opacity uppercase tracking-widest">
-                Empezar
-            </button>
-</div>
-</header>
-<main class="relative">
-<div class="line-drawing"></div>
-<!-- HERO SECTION -->
-<section class="relative min-h-screen flex flex-col justify-center items-center px-margin-mobile pt-32 pb-20 overflow-hidden">
-<div class="absolute inset-0 z-0">
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LNX | Páginas web, menús digitales y automatización para negocios locales en Jalisco</title>
+<meta name="description" content="LNX crea páginas web, menús digitales, perfiles de Google y sistemas de citas y pedidos por WhatsApp para negocios locales en Jalisco. Cotiza sin compromiso.">
+<meta name="theme-color" content="#0E1430">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LNX | Software y presencia digital para negocios locales">
+<meta property="og:description" content="Páginas web, menús digitales y automatización por WhatsApp para negocios locales.">
+<meta property="og:image" content="https://lnx-landing.vercel.app/assets/images/taqueria-luna.png"><!-- Cambia por una imagen 1200x630 propia -->
+<meta property="og:url" content="https://lnx-landing.vercel.app/">
+<link rel="icon" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"LNX Digital Agency","url":"https://lnx-landing.vercel.app/","email":"lunxx12@gmail.com","telephone":"+523323507197","areaServed":"Jalisco, México","description":"Páginas web, menús digitales y automatización por WhatsApp para negocios locales."}
+</script>
+<style>
+:root{--night:#0E1430;--panel:#171F42;--line:#2A3566;--gold:#C9A96A;--gold-d:#8A6B2A;--ink:#12182F;--mist:#EEF0F7;--txt:#DDE1F2;--mute:#9AA3C7;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:400 17px/1.6 Inter,system-ui,sans-serif;color:var(--txt);background:var(--night);padding-bottom:env(safe-area-inset-bottom,0)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-.02em;color:#fff}
+h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:700}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:500}
+p{max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.light{background:var(--mist);color:#3A4260}
+.light h2,.light h3{color:var(--ink)}
+.msr{font-family:'Material Symbols Outlined';font-size:24px;line-height:1;font-weight:400;font-style:normal;display:inline-block;vertical-align:middle;-webkit-font-feature-settings:'liga';font-feature-settings:'liga'}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:10px;font:600 1rem Inter,sans-serif;text-decoration:none;border:2px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn.p{background:var(--gold);color:var(--night)}
+.btn.p:hover{background:#DABD82}
+.btn.s{color:#fff}
+.btn.s:hover{background:rgba(201,169,106,.15)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(14,20,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand img{height:34px;width:auto;display:block}
+.nav ul{display:flex;gap:28px;list-style:none;padding:0;align-items:center}
+.nav a.l{text-decoration:none;color:var(--txt);font-weight:500;font-size:.95rem}
+.nav a.l:hover{color:var(--gold)}
+.nav .btn{padding:10px 20px}
+.mb{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
+@media(max-width:820px){.mb{display:block}.nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--night);border-bottom:1px solid var(--line);flex-direction:column;padding:16px 24px 24px;gap:16px;align-items:flex-start}.nav ul.open{display:flex}}
+/* hero */
+.hero{padding:72px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.tag{display:inline-block;border:1px solid var(--line);color:var(--gold);padding:6px 14px;border-radius:99px;font-size:.9rem;margin-bottom:22px}
+.hero p.sub{font-size:1.15rem;margin:22px 0 34px;color:var(--txt)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.frame{position:relative;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);aspect-ratio:16/10;overflow:hidden;box-shadow:0 30px 70px -30px #000}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.moon{position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;box-shadow:inset -34px 12px 0 0 rgba(201,169,106,.9);transform:rotate(-20deg);pointer-events:none;opacity:.9}
+.hero .in{opacity:0;transform:translateY(14px);animation:up .7s ease forwards}
+.hero .in:nth-child(2){animation-delay:.12s}.hero .in:nth-child(3){animation-delay:.24s}.hero .in:nth-child(4){animation-delay:.36s}
+.hero .frame{animation:up .9s .3s ease both}
+@keyframes up{to{opacity:1;transform:none}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+/* facts */
+.facts{background:var(--panel);border-block:1px solid var(--line);padding:26px 0}
+.facts ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.facts li{display:flex;gap:12px;align-items:center;font-size:.95rem;color:var(--txt)}
+.facts .msr{color:var(--gold);flex:none}
+@media(max-width:900px){.facts ul{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.facts ul{grid-template-columns:1fr}}
+/* why */
+.why .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+.why h2{position:sticky;top:110px;align-self:start}
+.row{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid #D3D8EA}
+.row:first-child{padding-top:0}.row:last-child{border:0}
+.row .msr{color:var(--gold-d);font-size:30px;flex:none}
+.row p{margin-top:6px}
+@media(max-width:900px){.why .wrap{grid-template-columns:1fr;gap:32px}.why h2{position:static}}
+/* services */
+.head{margin-bottom:48px}.head p{margin-top:14px;color:var(--mute)}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.g{border-top:3px solid var(--gold);padding-top:22px}
+.g h3{font-size:1.4rem;margin-bottom:4px}
+.g>p{color:var(--mute);font-size:.95rem;margin-bottom:18px}
+.g ul{list-style:none;padding:0}
+.g li{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.g li .msr{color:var(--gold);flex:none;margin-top:2px}
+.g li b{display:block;color:#fff;font-weight:600}
+.g li span.d{font-size:.93rem;color:var(--mute);display:block;margin-top:2px}
+.pill{display:inline-block;margin-left:8px;font-size:.75rem;font-weight:600;color:var(--night);background:var(--gold);border-radius:99px;padding:2px 10px;vertical-align:middle}
+.note{margin-top:36px;color:var(--mute);font-size:.95rem}
+@media(max-width:960px){.groups{grid-template-columns:1fr}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;list-style:none;padding:0;margin-top:44px}
+.steps li{position:relative;padding:28px 22px 0 0;border-top:2px solid #C3C9E0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font:700 .95rem 'Space Grotesk';display:grid;place-items:center}
+.steps small{display:block;color:var(--gold-d);font-weight:600;margin:4px 0 8px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;row-gap:44px}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+/* work */
+.proj{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-bottom:72px}
+.proj:nth-of-type(even){grid-template-columns:.9fr 1.1fr}
+.proj:nth-of-type(even) .shot{order:2}
+.shot{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:16/10}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.proj .kind{color:var(--gold);font-weight:600;font-size:.95rem;margin-bottom:8px}
+.proj h3{font-size:1.8rem;margin-bottom:12px}
+.proj ul{list-style:none;padding:0;margin-top:16px;display:grid;gap:8px}
+.proj li{display:flex;gap:10px;align-items:center;font-size:.95rem}
+.proj li .msr{color:var(--gold);font-size:20px}
+blockquote{border-left:3px solid var(--gold);padding:6px 0 6px 24px;max-width:720px}
+blockquote p{font:500 1.35rem/1.45 'Space Grotesk';color:#fff}
+blockquote footer{margin-top:14px;color:var(--mute);font-size:.95rem;padding:0}
+@media(max-width:860px){.proj,.proj:nth-of-type(even){grid-template-columns:1fr;gap:24px}.proj:nth-of-type(even) .shot{order:0}}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+.plan{background:#fff;border:1px solid #D3D8EA;border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.plan.hot{background:var(--ink);color:var(--txt);border-color:var(--ink);transform:translateY(-10px)}
+.plan.hot h3{color:#fff}
+.plan .who{font-size:.95rem;margin:6px 0 18px}
+.plan ul{list-style:none;padding:0;margin-bottom:26px;display:grid;gap:10px;flex:1}
+.plan li{display:flex;gap:10px;font-size:.96rem}
+.plan li .msr{font-size:20px;color:var(--gold-d);flex:none}
+.plan.hot li .msr{color:var(--gold)}
+.plan .btn{justify-content:center}
+.plan:not(.hot) .btn.s{color:var(--ink);border-color:var(--ink)}
+@media(max-width:900px){.plans{grid-template-columns:1fr}.plan.hot{transform:none}}
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.badge{aspect-ratio:1;max-width:340px;border-radius:50%;border:1px solid var(--line);background:radial-gradient(circle at 30% 30%,var(--panel),var(--night));display:grid;place-items:center;position:relative;overflow:hidden}
+.badge img{width:56%;border-radius:14px;background:#fff;padding:10px}
+.about p+p{margin-top:16px}
+@media(max-width:860px){.about .wrap{grid-template-columns:1fr}.badge{max-width:220px}}
+/* faq */
+details{border-bottom:1px solid #C9CFE4;padding:20px 0;max-width:820px}
+summary{cursor:pointer;font:500 1.1rem 'Space Grotesk';color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--gold-d);font-size:1.5rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ways{list-style:none;padding:0;margin-top:28px;display:grid;gap:16px}
+.ways li{display:flex;gap:14px;align-items:center}
+.ways .msr{color:var(--gold)}
+.ways a{text-decoration:none;font-weight:500}.ways a:hover{color:var(--gold)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem;color:#fff}
+input,select,textarea{font:inherit;color:#fff;background:var(--night);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+textarea{min-height:100px;resize:vertical}
+form .btn{justify-content:center}
+form small{color:var(--mute)}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+/* footer */
+footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px #000;text-decoration:none}
 
-</div>
-<div class="relative z-10 max-w-4xl text-center space-y-stack-lg">
-<span class="inline-block px-3 py-1 border border-primary/20 rounded-full font-code-md text-label-sm text-primary/60 geist-mono uppercase tracking-[0.2em] mb-4">
-                    Estudio de Ingeniería Digital
-                </span>
-<h1 class="font-display-lg-mobile md:text-display-lg font-display-lg leading-tight tracking-tight">
-                    LNX: Ingeniería Digital y <span class="text-on-surface-variant">Automatización</span> de Procesos.
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    Soluciones tecnológicas a medida para potenciar negocios locales. Creamos el motor digital que tu empresa necesita.
-                </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-4 pt-stack-lg">
-<button class="w-full md:w-auto bg-primary text-background px-8 py-4 rounded-full font-label-sm text-label-sm font-bold hover:scale-105 transition-transform">
-                        Empezar mi proyecto
-                    </button>
-<button class="w-full md:w-auto border border-primary/20 text-primary px-8 py-4 rounded-full font-label-sm text-label-sm font-bold hover:bg-white/5 transition-colors">
-                        Ver portafolio
-                    </button>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-<span class="material-symbols-outlined">expand_more</span>
-</div>
-</section>
-<!-- SERVICIOS SECTION -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-surface-variant/30">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-xl">
-<h2 class="font-headline-md text-headline-md mb-4 uppercase tracking-tighter">Servicios de precisión</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Transformamos la complejidad técnica en interfaces intuitivas y sistemas autónomos.</p>
-</div>
-<div class="hidden md:block h-[1px] flex-grow mx-8 bg-surface-variant/30"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Card 1 -->
-<div class="p-stack-lg bg-surface-container border border-surface-variant hover-lift flex flex-col h-full group">
-<div class="w-12 h-12 flex items-center justify-center border border-primary/10 mb-stack-lg group-hover:bg-primary group-hover:text-background transition-colors duration-300">
-<span class="material-symbols-outlined" data-icon="web">web</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">Desarrollo Web Premium</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Sitios web de alta gama, optimizados para velocidad y conversión, reflejando la identidad única de tu marca.</p>
-<a class="mt-stack-lg inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
-                        Ver más <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-<!-- Card 2 -->
-<div class="p-stack-lg bg-surface-container border border-surface-variant hover-lift flex flex-col h-full group">
-<div class="w-12 h-12 flex items-center justify-center border border-primary/10 mb-stack-lg group-hover:bg-primary group-hover:text-background transition-colors duration-300">
-<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">Automatización Inteligente</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Eliminamos tareas repetitivas mediante flujos de trabajo autónomos que ahorran tiempo y reducen errores.</p>
-<a class="mt-stack-lg inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
-                        Ver más <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-<!-- Card 3 -->
-<div class="p-stack-lg bg-surface-container border border-surface-variant hover-lift flex flex-col h-full group">
-<div class="w-12 h-12 flex items-center justify-center border border-primary/10 mb-stack-lg group-hover:bg-primary group-hover:text-background transition-colors duration-300">
-<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">Consultoría Tecnológica</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Asesoramiento estratégico para digitalizar tu negocio con las herramientas correctas sin gastos innecesarios.</p>
-<a class="mt-stack-lg inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
-                        Ver más <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- PORTAFOLIO SECTION -->
-<section class="py-24 bg-surface-container-low border-y border-surface-variant/30">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative group">
-<div class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-colors duration-500"></div>
-<div class="relative bg-[#1a1a1a] p-4 md:p-8 rounded-xl border border-surface-variant overflow-hidden shadow-2xl">
-<div class="aspect-[4/3] bg-surface rounded-lg overflow-hidden border border-surface-variant relative">
-<div class="absolute top-0 left-0 w-full h-8 bg-surface-variant flex items-center px-4 gap-2 border-b border-surface-variant">
-<div class="w-2 h-2 rounded-full bg-error"></div>
-<div class="w-2 h-2 rounded-full bg-secondary"></div>
-<div class="w-2 h-2 rounded-full bg-primary/40"></div>
-</div>
-<div class="pt-8 h-full overflow-hidden" data-alt="A sophisticated dark-themed restaurant website layout for 'El Carboncito' featuring high-resolution photography of gourmet grilled meat, a minimalist digital menu with elegant typography, and a integrated location map. The aesthetic is modern, professional, and culinary-focused, utilizing deep shadows and crisp white highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYv4PdaL-OHQBjOghgAuq5If75C_I691qiWFq0Ais9X09vvRJjWeE2X-1uXQxLTAT0J2YrAqFR2I_BOQljwwzbIBJZ5tcJHFFBhp75OUVRShelJaNMzY6niaMZEhaIISiJ2TWkx_aF8ErebkocD4n-4w5spwNgANXMp5kLrCkQoQm_8HDv3WekaUMdGgvFtb3nr_mE9CfCPtnIjxMMlA_Ol0-DgwLUzpr023qw2Pge-z5TLP7hggnhXBHHpyili9PuzXaz2TLWF9E')"></div>
-</div>
-</div>
-</div>
-<div class="space-y-stack-lg">
-<span class="font-code-md text-label-sm text-primary/40 geist-mono">CASO DE ÉXITO</span>
-<h2 class="font-display-lg-mobile md:text-headline-md font-headline-md">Digitalizamos la experiencia de sabor para El Carboncito</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Diseñamos un sitio web completo para este negocio de comida local, con menú digital, pedidos directos por WhatsApp y ubicación integrada.
-                        </p>
-<div class="flex gap-4 items-center">
-<span class="px-3 py-1 bg-surface-variant/50 text-[10px] font-bold tracking-[0.2em] rounded-full border border-surface-variant uppercase">Diseño Web</span>
-<span class="px-3 py-1 bg-surface-variant/50 text-[10px] font-bold tracking-[0.2em] rounded-full border border-surface-variant uppercase">Negocio Local</span>
-<span class="px-3 py-1 bg-surface-variant/50 text-[10px] font-bold tracking-[0.2em] rounded-full border border-surface-variant uppercase">WhatsApp</span>
-</div>
-<div class="pt-stack-md flex flex-wrap gap-4">
-<a href="https://el-carboncito.vercel.app/" target="_blank" rel="noopener" class="bg-primary text-background px-8 py-3 rounded-full font-label-sm text-label-sm font-bold hover:opacity-90 transition-opacity inline-block">
-                                Ver sitio en vivo
-                            </a>
-<button class="border border-surface-variant text-primary px-8 py-3 rounded-full font-label-sm text-label-sm font-bold hover:opacity-80 transition-opacity">
-                                Ver todo el portafolio
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- PROCESO SECTION -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<h2 class="font-headline-md text-headline-md mb-16 uppercase text-center tracking-tighter">Metodología LNX</h2>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="relative pt-12 border-t border-surface-variant">
-<span class="absolute top-0 left-0 font-code-md text-[40px] leading-none text-primary/10 geist-mono -translate-y-1/2">01</span>
-<h4 class="font-headline-md text-body-md font-bold mb-4">Platicamos tu negocio</h4>
-<p class="font-body-md text-label-sm text-on-surface-variant">Sesión inicial para entender tus retos, metas y la infraestructura actual de tu empresa.</p>
-</div>
-<div class="relative pt-12 border-t border-surface-variant">
-<span class="absolute top-0 left-0 font-code-md text-[40px] leading-none text-primary/10 geist-mono -translate-y-1/2">02</span>
-<h4 class="font-headline-md text-body-md font-bold mb-4">Propuesta</h4>
-<p class="font-body-md text-label-sm text-on-surface-variant">Diseñamos una arquitectura técnica detallada con tiempos y costos transparentes.</p>
-</div>
-<div class="relative pt-12 border-t border-surface-variant">
-<span class="absolute top-0 left-0 font-code-md text-[40px] leading-none text-primary/10 geist-mono -translate-y-1/2">03</span>
-<h4 class="font-headline-md text-body-md font-bold mb-4">Diseño</h4>
-<p class="font-body-md text-label-sm text-on-surface-variant">Prototipamos la experiencia de usuario y el backend robusto que soportará tu sistema.</p>
-</div>
-<div class="relative pt-12 border-t border-surface-variant">
-<span class="absolute top-0 left-0 font-code-md text-[40px] leading-none text-primary/10 geist-mono -translate-y-1/2">04</span>
-<h4 class="font-headline-md text-body-md font-bold mb-4">Entrega</h4>
-<p class="font-body-md text-label-sm text-on-surface-variant">Despliegue final, capacitación y soporte continuo para asegurar el éxito del proyecto.</p>
-</div>
-</div>
-</section>
-<!-- SOBRE LNX SECTION -->
-<section class="py-24 bg-surface-container-lowest overflow-hidden">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative">
-<div class="max-w-3xl mx-auto space-y-stack-lg">
-<h2 class="font-headline-md text-headline-md tracking-tighter">Sobre LNX</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                        LNX es un estudio independiente enfocado en generar impacto local a través de ingeniería de software de calidad técnica superior. Combinamos la agilidad del desarrollo moderno con la precisión de la ingeniería clásica.
-                    </p>
-</div>
-</div>
-</section>
-<!-- CTA FINAL SECTION -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
-<div class="bg-primary p-12 md:p-24 text-background flex flex-col md:flex-row items-center justify-between gap-12 group overflow-hidden relative">
-<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-background/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-<div class="relative z-10">
-<h2 class="font-display-lg-mobile md:text-headline-md font-headline-md tracking-tight mb-4">¿Tienes un proyecto en mente?</h2>
-<p class="font-body-md text-body-md opacity-80 max-w-md">Llevemos tu negocio al siguiente nivel con tecnología de vanguardia.</p>
-</div>
-<a class="relative z-10 bg-background text-primary px-10 py-5 rounded-full font-label-sm text-label-sm font-bold uppercase tracking-widest hover:px-12 transition-all inline-flex items-center gap-4 group" href="https://wa.me/523323507197" target="_blank" rel="noopener">
-                    Contacto <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-</div>
-</section>
+/* animaciones */
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:40}
+header{transition:box-shadow .3s,background .3s}header.sc{box-shadow:0 10px 30px -15px #000;background:rgba(14,20,48,.98)}
+.hero{position:relative}
+.stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(1.5px 1.5px at 12% 20%,#fff,transparent),radial-gradient(1px 1px at 30% 70%,#fff,transparent),radial-gradient(1.5px 1.5px at 55% 15%,#E2C58D,transparent),radial-gradient(1px 1px at 72% 60%,#fff,transparent),radial-gradient(1.5px 1.5px at 88% 30%,#fff,transparent),radial-gradient(1px 1px at 45% 88%,#E2C58D,transparent),radial-gradient(1px 1px at 8% 82%,#fff,transparent);animation:tw 5s ease-in-out infinite alternate;opacity:.7}
+@keyframes tw{from{opacity:.25}to{opacity:.9}}
+.hero .wrap{position:relative}
+.moon{animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:rotate(-14deg) translateY(10px)}}
+.rot{color:var(--gold);display:inline-block;transition:opacity .35s,transform .35s}
+.rot.o{opacity:0;transform:translateY(8px)}
+.btn.p{position:relative;overflow:hidden}
+.btn.p::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn.p:hover::after{left:130%}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.rv.v{opacity:1;transform:none}
+.shot img{transition:transform .8s ease}.proj:hover .shot img{transform:scale(1.05)}
+.shot{transition:border-color .3s}.proj:hover .shot{border-color:var(--gold)}
+.steps li{border-top-color:transparent;background:linear-gradient(var(--gold-d),var(--gold-d)) top left/0 2px no-repeat;transition:background-size .9s ease,opacity .7s,transform .7s;transition-delay:var(--d,0s)}
+.steps li.v{background-size:100% 2px}
+.g li{transition:transform .25s}.g li:hover{transform:translateX(6px)}
+.plan.hot.v{transform:translateY(-10px)}.plan{transition:transform .3s,box-shadow .3s,opacity .7s}.plan:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(14,20,48,.5)}.plan.hot:hover{transform:translateY(-16px)}
+.wa{animation:pu 2.8s infinite}
+@keyframes pu{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+
+/* v3: cielo, luna y detalles del logo */
+.sky{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.bm{position:absolute;right:-90px;top:-20px;width:min(44vw,480px);pointer-events:none;z-index:0;will-change:transform}
+.bm svg{display:block;width:100%;filter:drop-shadow(0 0 46px rgba(201,169,106,.4));animation:fl2 9s ease-in-out infinite}
+@keyframes fl2{50%{transform:translateY(16px) rotate(-5deg)}}
+@media(max-width:900px){.bm{width:250px;right:-80px;top:0;opacity:.5}}
+.tilt{transition:transform .25s ease;will-change:transform}
+.btn.p{background:linear-gradient(135deg,#EBD296,#C9A96A 55%,#A98744)}
+.btn.p:hover{background:linear-gradient(135deg,#F3DFAE,#D6B877 55%,#B8944D)}
+h2{position:relative;padding-bottom:16px}
+h2::after{content:'';position:absolute;left:0;bottom:0;width:0;height:3px;border-radius:3px;background:linear-gradient(90deg,#F6E3B0,#C9A96A,rgba(201,169,106,0));transition:width .9s .25s ease}
+h2.v::after{width:110px}
+.cr{display:inline-block;flex:none;width:14px;height:14px;border-radius:50%;box-shadow:inset -4px 1px 0 0 var(--gold);align-self:center}
+.mq{overflow:hidden;background:var(--night);border-bottom:1px solid var(--line);padding:18px 0}
+.mt{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mt>div{display:flex;gap:28px;padding-right:28px}
+.mt span{font:500 1.1rem 'Space Grotesk';color:var(--mute);white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.contact{position:relative;overflow:hidden}.contact .wrap{position:relative}
+.badge{overflow:visible;background:radial-gradient(circle at 30% 30%,var(--panel),var(--night));position:relative}
+.badge::before{content:'';position:absolute;inset:-14px;border-radius:50%;border:2px solid transparent;border-top-color:var(--gold);border-left-color:rgba(201,169,106,.4);animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge img.ph{width:100%;height:100%;object-fit:cover;border-radius:50%;background:none;padding:0}
+.badge img.lg{width:62%;height:auto;background:none;padding:0;border-radius:0}
+@media(prefers-reduced-motion:reduce){.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="pg"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#top" aria-label="LNX inicio"><img src="assets/images/logo-lnx.png" alt="LNX" height="34"></a>
+  <button class="mb" aria-label="Abrir menú" aria-expanded="false"><span class="msr" aria-hidden="true">menu</span></button>
+  <ul id="nv">
+    <li><a class="l" href="#servicios">Servicios</a></li>
+    <li><a class="l" href="#proyectos">Proyectos</a></li>
+    <li><a class="l" href="#paquetes">Paquetes</a></li>
+    <li><a class="l" href="#nosotros">Nosotros</a></li>
+    <li><a class="btn p" href="#contacto">Cotizar</a></li>
+  </ul>
+</div></header>
+
+<main id="top">
+<section class="hero"><canvas class="sky" aria-hidden="true"></canvas><div class="bm" id="bm" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3B0"/><stop offset=".5" stop-color="#C9A96A"/><stop offset="1" stop-color="#8A6B2A"/></linearGradient><mask id="mk"><rect width="200" height="200" fill="#fff"/><circle cx="130" cy="92" r="74" fill="#000"/></mask></defs><circle cx="95" cy="100" r="86" fill="url(#mg)" mask="url(#mk)"/></svg></div><div class="wrap">
+  <div>
+    <span class="tag in">Software y presencia digital para negocios locales</span>
+    <h1 class="in">Que tus clientes te encuentren, te escriban y te pidan.</h1>
+    <p class="sub in">Páginas web, menús digitales y sistemas de pedidos y citas para <span class="rot" id="rot">restaurantes</span>. Que te encuentren en Google, te escriban por WhatsApp y vendas más.</p>
+    <div class="cta in">
+      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener"><span class="msr" aria-hidden="true">chat</span>Cotizar por WhatsApp</a>
+      <a class="btn s" href="#proyectos">Ver proyectos</a>
+    </div>
+  </div>
+  <div class="tilt"><div class="frame">
+    <video src="assets/lnx-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  </div></div>
+</div></section>
+
+<div class="facts"><div class="wrap"><ul>
+  <li><span class="msr" aria-hidden="true">schedule</span>Tu página lista en 7 a 10 días</li>
+  <li><span class="msr" aria-hidden="true">chat</span>Respuesta por WhatsApp el mismo día</li>
+  <li><span class="msr" aria-hidden="true">verified_user</span>Tu dominio y tu contenido son tuyos</li>
+  <li><span class="msr" aria-hidden="true">location_on</span>Trabajamos con negocios de Jalisco</li>
+</ul></div></div>
+<div class="mq" aria-hidden="true"><div class="mt"><div><span>Restaurantes</span><i class="cr"></i><span>Cafeterías</span><i class="cr"></i><span>Tiendas</span><i class="cr"></i><span>Ópticas</span><i class="cr"></i><span>Estéticas y barberías</span><i class="cr"></i><span>Talleres</span><i class="cr"></i><span>Consultorios</span><i class="cr"></i><span>Papelerías</span><i class="cr"></i></div><div><span>Restaurantes</span><i class="cr"></i><span>Cafeterías</span><i class="cr"></i><span>Tiendas</span><i class="cr"></i><span>Ópticas</span><i class="cr"></i><span>Estéticas y barberías</span><i class="cr"></i><span>Talleres</span><i class="cr"></i><span>Consultorios</span><i class="cr"></i><span>Papelerías</span><i class="cr"></i></div></div></div>
+
+<section class="light why"><div class="wrap">
+  <h2 class="rv">Tu negocio ya existe. Falta que se vea en internet.</h2>
+  <div>
+    <div class="row rv"><span class="msr" aria-hidden="true">search</span><div><h3>Te encuentran en Google</h3><p>Si buscan lo que vendes y no apareces en el mapa, esos clientes compran en otro lado. Optimizamos tu perfil de Google y tu página para aparecer.</p></div></div>
+    <div class="row rv"><span class="msr" aria-hidden="true">forum</span><div><h3>Te escriben listos para comprar</h3><p>Catálogo, menú y botones de WhatsApp con el mensaje ya armado. Menos preguntas repetidas y más pedidos claros.</p></div></div>
+    <div class="row rv"><span class="msr" aria-hidden="true">workspace_premium</span><div><h3>Inspiras confianza desde el primer vistazo</h3><p>Una página propia con tu marca dice más de tu negocio que un perfil de red social, y no depende de un algoritmo.</p></div></div>
+  </div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+  <div class="head"><h2 class="rv">Lo que hacemos por tu negocio</h2><p>Empieza por lo básico y suma sistemas conforme crezcas.</p></div>
+  <div class="groups">
+    <div class="g rv"><h3>Presencia</h3><p>Que te vean y te reconozcan.</p><ul>
+      <li><span class="msr" aria-hidden="true">web</span><div><b>Páginas web a medida</b><span class="d">Landing pages, catálogos y sitios para tu negocio, rápidos y listos para celular.</span></div></li>
+      <li><span class="msr" aria-hidden="true">storefront</span><div><b>Perfil de Google Business</b><span class="d">Mapa, fotos, horarios y reseñas gestionadas para que te encuentren cerca.</span></div></li>
+      <li><span class="msr" aria-hidden="true">qr_code_2</span><div><b>QRs estratégicos</b><span class="d">Para pedir reseñas, abrir tu menú o escribirte con un escaneo.</span></div></li>
+      <li><span class="msr" aria-hidden="true">draw</span><div><b>Identidad de marca</b><span class="d">Logo, colores y material visual consistente.</span></div></li>
+    </ul></div>
+    <div class="g rv"><h3>Ventas y pedidos</h3><p>Que comprar sea fácil.</p><ul>
+      <li><span class="msr" aria-hidden="true">restaurant_menu</span><div><b>Menús digitales</b><span class="d">Con fotos y precios, fáciles de actualizar, accesibles con un QR en la mesa.</span></div></li>
+      <li><span class="msr" aria-hidden="true">shopping_bag</span><div><b>Pedidos por WhatsApp</b><span class="d">El cliente arma su pedido en la página y te llega listo por mensaje.</span></div></li>
+      <li><span class="msr" aria-hidden="true">inventory_2</span><div><b>Catálogo digital</b><span class="d">Tus productos y disponibilidad a la vista antes de que vayan a la tienda.</span></div></li>
+    </ul></div>
+    <div class="g rv"><h3>Automatización</h3><p>Que tu negocio atienda mientras trabajas.</p><ul>
+      <li><span class="msr" aria-hidden="true">event_available</span><div><b>Agenda de citas</b><span class="d">El cliente elige servicio y horario libre sin esperar tu respuesta.</span></div></li>
+      <li><span class="msr" aria-hidden="true">notifications_active</span><div><b>Recordatorios por WhatsApp</b><span class="d">Un aviso antes de la cita para reducir los clientes que no llegan.</span></div></li>
+      <li><span class="msr" aria-hidden="true">smart_toy</span><div><b>Atención automática 24/7</b><span class="d">Respuestas a horarios, ubicación, precios y formas de pago a cualquier hora.</span></div></li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="light" id="proceso"><div class="wrap">
+  <h2 class="rv">Así trabajamos contigo</h2>
+  <ol class="steps">
+    <li class="rv"><h3>Diagnóstico</h3><small>Día 1 a 2</small><p>Platicamos de tu negocio, tus clientes y qué quieres lograr.</p></li>
+    <li class="rv"><h3>Diseño</h3><small>Día 3 a 5</small><p>Te mostramos cómo se verá, con tu marca. Ajustas lo que no te guste.</p></li>
+    <li class="rv"><h3>Desarrollo</h3><small>Día 6 a 9</small><p>Construimos tu sitio y lo probamos en celular y computadora.</p></li>
+    <li class="rv"><h3>Lanzamiento</h3><small>Día 10</small><p>Lo publicamos, conectamos tu dominio y te enseñamos a usarlo. Incluye una ronda de ajustes.</p></li>
+  </ol>
+  <p style="margin-top:36px">Solo necesitas darnos tu logo, fotos, menú o lista de productos y tus datos de contacto. Lo demás lo hacemos nosotros.</p>
+</div></section>
+
+<section id="proyectos"><div class="wrap">
+  <div class="head"><h2 class="rv">Proyectos recientes</h2></div>
+  <article class="proj rv">
+    <div class="shot"><img src="assets/images/gelatinas-luna.png" onerror="this.onerror=null;this.src='https://gelatinasluna.vercel.app/tricolor.jpg'" alt="Sitio web de Gelatinas Luna" loading="lazy"></div>
+    <div><p class="kind">Producto artesanal</p><h3>Gelatinas Luna</h3>
+      <p>Identidad de marca y sitio completo para el negocio de Marisol Luna: logo, paleta, menú de sabores con botón de pedido por WhatsApp, cotización de pedidos para eventos y preguntas frecuentes.</p>
+      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Logo e identidad de marca</li><li><span class="msr" aria-hidden="true">check_circle</span>Pedido por sabor en un toque</li><li><span class="msr" aria-hidden="true">check_circle</span>Sección de pedidos especiales</li></ul>
+      <p style="margin-top:18px"><a class="btn s" href="https://gelatinasluna.vercel.app/" target="_blank" rel="noopener">Ver sitio</a></p></div>
+  </article>
+  <article class="proj rv">
+    <div class="shot"><img src="assets/images/el-carboncito.png" alt="Landing page de El Carboncito" loading="lazy"></div>
+    <div><p class="kind">Comida a domicilio</p><h3>El Carboncito</h3>
+      <p>Landing page enfocada en que el cliente pida: menú completo, pedido en 3 pasos, testimonios y preguntas frecuentes.</p>
+      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Pedido en 3 pasos</li><li><span class="msr" aria-hidden="true">check_circle</span>Testimonios y FAQ</li><li><span class="msr" aria-hidden="true">check_circle</span>Contacto directo por WhatsApp</li></ul></div>
+  </article>
+  <blockquote class="rv"><p>Me encantó cómo quedó. Se ve muy padre y me ha facilitado muchísimo poder mostrarle mi negocio a los clientes.</p><footer>Katya, propietaria de El Carboncito</footer></blockquote>
+</div></section>
+
+<section class="light" id="paquetes"><div class="wrap">
+  <h2 class="rv">Paquetes</h2>
+  <p style="margin-top:12px">Elige un punto de partida. Te enviamos una cotización clara, sin costos escondidos.</p>
+  <!-- Agrega aquí tus precios, por ejemplo: <p class="who">Desde $X MXN</p> -->
+  <div class="rv plans">
+    <div class="rv plan"><h3>Presencia básica</h3><p class="who">Para empezar a existir en internet.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Landing page de una sección</li><li><span class="msr" aria-hidden="true">check</span>Botón de WhatsApp con mensaje armado</li><li><span class="msr" aria-hidden="true">check</span>Mapa y datos de contacto</li><li><span class="msr" aria-hidden="true">check</span>Dominio conectado</li></ul>
+      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
+    <div class="rv plan hot"><h3>Presencia completa</h3><p class="who">Para negocios que quieren más clientes.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Sitio completo con catálogo o menú</li><li><span class="msr" aria-hidden="true">check</span>Perfil de Google Business optimizado</li><li><span class="msr" aria-hidden="true">check</span>QR de reseñas y de menú</li><li><span class="msr" aria-hidden="true">check</span>Identidad visual básica</li></ul>
+      <a class="btn p" href="#contacto">Cotizar este paquete</a></div>
+    <div class="rv plan"><h3>Automatización</h3><p class="who">Para ahorrar tiempo y no perder citas.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Agenda de citas en línea</li><li><span class="msr" aria-hidden="true">check</span>Recordatorios por WhatsApp</li><li><span class="msr" aria-hidden="true">check</span>Respuestas automáticas a preguntas frecuentes</li><li><span class="msr" aria-hidden="true">check</span>Se cotiza según tu caso</li></ul>
+      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
+  </div>
+  <p style="margin-top:28px">Mantenimiento mensual opcional: actualizaciones de contenido, respaldo y soporte por WhatsApp.</p>
+</div></section>
+
+<section class="about" id="nosotros"><div class="wrap">
+  <div class="badge"><img class="ph" src="assets/images/victor.jpg" onerror="this.onerror=null;this.className='lg';this.src='assets/images/logo-lnx.png'" alt="Victor, fundador de LNX" loading="lazy"></div>
+  <div>
+    <h2 class="rv">Quiénes somos</h2>
+    <p style="margin-top:18px">LNX es un estudio de software y presencia digital de Jalisco. Fundado por Victor, estudiante de Ingeniería en Sistemas, nació para que los negocios locales tengan herramientas digitales que antes solo usaban las empresas grandes.</p>
+    <p>Trabajamos de forma cercana: hablas directo con quien construye tu proyecto, sin intermediarios ni tecnicismos. Si algo no se entiende, lo explicamos.</p>
+    <!-- Agrega aquí tu foto y una frase personal para generar más confianza -->
+  </div>
+</div></section>
+
+<section class="light" id="faq"><div class="wrap">
+  <h2 class="rv" style="margin-bottom:32px">Preguntas frecuentes</h2>
+  <details><summary>¿De quién es el dominio y la página?</summary><p>Tuyos. Registramos el dominio a tu nombre y te entregamos acceso a tu contenido.</p></details>
+  <details><summary>¿Cuánto tarda mi página?</summary><p>Una landing básica toma de 7 a 10 días desde que nos entregas logo, fotos y datos. Proyectos con más secciones o sistemas toman más; te damos la fecha al cotizar.</p></details>
+  <details><summary>¿Puedo pedir cambios después de lanzar?</summary><p>Sí. Incluimos una ronda de ajustes al lanzamiento, y con el plan de mantenimiento puedes pedir actualizaciones cuando las necesites.</p></details>
+  <details><summary>¿Se ve bien en celular?</summary><p>Sí. Probamos cada sitio en celular, tableta y computadora antes de entregarlo.</p></details>
+  <details><summary>¿Cómo se paga?</summary><p>Se acuerda en la cotización, normalmente con un anticipo para empezar y el resto al entregar. Todo queda por escrito.</p></details>
+</div></section>
+
+<section class="contact" id="contacto"><canvas class="sky" aria-hidden="true"></canvas><div class="wrap">
+  <div>
+    <h2 class="rv">Cuéntanos de tu negocio</h2>
+    <p style="margin-top:16px">Respondemos el mismo día. La cotización es gratis y sin compromiso.</p>
+    <ul class="ways">
+      <li><span class="msr" aria-hidden="true">chat</span><a href="https://wa.me/523323507197" target="_blank" rel="noopener">WhatsApp: 33 2350 7197</a></li>
+      <li><span class="msr" aria-hidden="true">mail</span><a href="mailto:lunxx12@gmail.com">lunxx12@gmail.com</a></li>
+      <li><span class="msr" aria-hidden="true">location_on</span>Jalisco, México</li>
+    </ul>
+  </div>
+  <form id="f">
+    <label>Tu nombre<input name="n" required autocomplete="name"></label>
+    <label>Tipo de negocio<select name="t"><option>Restaurante o cafetería</option><option>Tienda o comercio</option><option>Servicios (estética, taller, consultorio)</option><option>Otro</option></select></label>
+    <label>¿Qué necesitas?<textarea name="m" placeholder="Ej. una página con menú y pedidos por WhatsApp"></textarea></label>
+    <button class="btn p" type="submit"><span class="msr" aria-hidden="true">send</span>Enviar por WhatsApp</button>
+    <small>Se abrirá WhatsApp con tu mensaje listo para enviar.</small>
+  </form>
+</div></section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg border-t border-surface-variant bg-surface">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max mx-auto">
-<div class="flex flex-col items-center md:items-start gap-2">
-<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">LNX</span>
-<p class="font-label-sm text-label-sm text-on-surface-variant geist-mono">© 2026<span style="letter-spacing: 0.05em;">&nbsp;LNX Engineering. Todos los derechos reservados.</span></p>
-</div>
-<div class="flex items-center gap-stack-lg">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="mailto:lunxx12@gmail.com">Email</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://wa.me/523323507197" target="_blank" rel="noopener">WhatsApp</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">LinkedIn</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Términos</a>
-</div>
-</div>
-</footer>
+
+<footer><div class="wrap">
+  <div>© 2026 LNX Digital Agency. Todos los derechos reservados.</div>
+  <nav><a href="terminos.html">Términos de servicio</a><a href="privacidad.html">Política de privacidad</a><a href="https://wa.me/523323507197">WhatsApp</a><!-- Agrega tus redes: Instagram, Facebook --></nav>
+</div></footer>
+
+<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><span class="msr" aria-hidden="true" style="font-size:30px">chat</span></a>
+
 <script>
-        // Micro-interactions and atmospheric logic
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            // Subtly shift background shader opacity or position
-            const shader = document.querySelector('webgl-shader');
-            if (shader) {
-                shader.style.opacity = 0.2 + (x * 0.2);
-            }
-        });
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();var d=new FormData(this);
+  var t='Hola LNX, soy '+d.get('n')+'. Mi negocio es: '+d.get('t')+'.'+(d.get('m')?' Necesito: '+d.get('m'):'');
+  window.open('https://wa.me/523323507197?text='+encodeURIComponent(t),'_blank','noopener');
+});
 
-        // Simple smooth scroll for links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+var h=document.querySelector('header'),pg=document.getElementById('pg');
+addEventListener('scroll',function(){h.classList.toggle('sc',scrollY>20);var m=document.documentElement.scrollHeight-innerHeight;pg.style.width=(m>0?scrollY/m*100:0)+'%'},{passive:true});
+var mb=document.querySelector('.mb'),nv=document.getElementById('nv');
+mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nv.addEventListener('click',function(e){if(e.target.tagName==='A')nv.classList.remove('open')});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.setProperty('--d',(i%4)*.1+'s');io.observe(el)});
+var w=['restaurantes','tiendas','estéticas y barberías','talleres','consultorios','ópticas'],k=0,r=document.getElementById('rot');
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(function(){r.classList.add('o');setTimeout(function(){k=(k+1)%w.length;r.textContent=w[k];r.classList.remove('o')},350)},2600);
 
-</body></html>
+document.querySelectorAll('.sky').forEach(function(c){
+ var x=c.getContext('2d'),W,H,S=[],sh=null,on=false,dpr=Math.min(devicePixelRatio||1,2),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);S=[];for(var i=0,n=Math.round(W*H/7000);i<n;i++)S.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.6,p:Math.random()*6.3,s:Math.random()*1.6+.5,g:Math.random()<.3});if(rm)d(0)}
+ function d(t){x.clearRect(0,0,W,H);S.forEach(function(s){x.globalAlpha=rm?.7:.3+.7*Math.abs(Math.sin(t/1000*s.s+s.p));x.fillStyle=s.g?'#E2C58D':'#fff';x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fill()});
+  if(!rm){if(!sh&&Math.random()<.006)sh={x:W*(.4+Math.random()*.6),y:H*Math.random()*.4,l:0};
+   if(sh){sh.x-=7;sh.y+=3.5;sh.l++;x.globalAlpha=Math.max(0,1-sh.l/50);x.strokeStyle='#F6E3B0';x.lineWidth=1.6;x.beginPath();x.moveTo(sh.x,sh.y);x.lineTo(sh.x+56,sh.y-28);x.stroke();if(sh.l>50)sh=null}}}
+ function f(t){if(!on)return;d(t);requestAnimationFrame(f)}
+ rs();addEventListener('resize',rs);
+ if(!rm)new IntersectionObserver(function(e){on=e[0].isIntersecting;if(on)requestAnimationFrame(f)}).observe(c);
+});
+var bm=document.getElementById('bm'),tl=document.querySelector('.tilt'),hr=document.querySelector('.hero');
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ addEventListener('scroll',function(){if(scrollY<900)bm.style.transform='translateY('+scrollY*.22+'px)'},{passive:true});
+ if(matchMedia('(hover:hover)').matches)hr.addEventListener('mousemove',function(e){var b=hr.getBoundingClientRect(),px=(e.clientX-b.left)/b.width-.5,py=(e.clientY-b.top)/b.height-.5;tl.style.transform='perspective(900px) rotateY('+px*7+'deg) rotateX('+(-py*7)+'deg)'});
+ hr.addEventListener('mouseleave',function(){tl.style.transform=''});
+}
+</script>
+</body>
+</html>
