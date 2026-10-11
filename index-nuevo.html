@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LNX | Páginas web, menús digitales y automatización para negocios locales en Jalisco</title>
+<meta name="description" content="LNX crea páginas web, menús digitales, perfiles de Google y sistemas de citas y pedidos por WhatsApp para negocios locales en Jalisco. Cotiza sin compromiso.">
+<meta name="theme-color" content="#0E1430">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LNX | Software y presencia digital para negocios locales">
+<meta property="og:description" content="Páginas web, menús digitales y automatización por WhatsApp para negocios locales.">
+<meta property="og:image" content="https://lnx-landing.vercel.app/assets/images/taqueria-luna.png"><!-- Cambia por una imagen 1200x630 propia -->
+<meta property="og:url" content="https://lnx-landing.vercel.app/">
+<link rel="icon" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"LNX Digital Agency","url":"https://lnx-landing.vercel.app/","email":"lunxx12@gmail.com","telephone":"+523323507197","areaServed":"Jalisco, México","description":"Páginas web, menús digitales y automatización por WhatsApp para negocios locales."}
+</script>
+<style>
+:root{--night:#0E1430;--panel:#171F42;--line:#2A3566;--gold:#C9A96A;--gold-d:#8A6B2A;--ink:#12182F;--mist:#EEF0F7;--txt:#DDE1F2;--mute:#9AA3C7;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:400 17px/1.6 Inter,system-ui,sans-serif;color:var(--txt);background:var(--night);padding-bottom:env(safe-area-inset-bottom,0)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-.02em;color:#fff}
+h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:700}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:500}
+p{max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.light{background:var(--mist);color:#3A4260}
+.light h2,.light h3{color:var(--ink)}
+.msr{font-family:'Material Symbols Outlined';font-size:24px;line-height:1;font-weight:400;font-style:normal;display:inline-block;vertical-align:middle;-webkit-font-feature-settings:'liga';font-feature-settings:'liga'}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:10px;font:600 1rem Inter,sans-serif;text-decoration:none;border:2px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn.p{background:var(--gold);color:var(--night)}
+.btn.p:hover{background:#DABD82}
+.btn.s{color:#fff}
+.btn.s:hover{background:rgba(201,169,106,.15)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(14,20,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand img{height:40px;display:block;border-radius:8px;background:#fff;padding:3px}
+.nav ul{display:flex;gap:28px;list-style:none;padding:0;align-items:center}
+.nav a.l{text-decoration:none;color:var(--txt);font-weight:500;font-size:.95rem}
+.nav a.l:hover{color:var(--gold)}
+.nav .btn{padding:10px 20px}
+@media(max-width:820px){.nav a.l{display:none}}
+/* hero */
+.hero{padding:72px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.tag{display:inline-block;border:1px solid var(--line);color:var(--gold);padding:6px 14px;border-radius:99px;font-size:.9rem;margin-bottom:22px}
+.hero p.sub{font-size:1.15rem;margin:22px 0 34px;color:var(--txt)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.frame{position:relative;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);aspect-ratio:16/10;overflow:hidden;box-shadow:0 30px 70px -30px #000}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.moon{position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;box-shadow:inset -34px 12px 0 0 rgba(201,169,106,.9);transform:rotate(-20deg);pointer-events:none;opacity:.9}
+.hero .in{opacity:0;transform:translateY(14px);animation:up .7s ease forwards}
+.hero .in:nth-child(2){animation-delay:.12s}.hero .in:nth-child(3){animation-delay:.24s}.hero .in:nth-child(4){animation-delay:.36s}
+.hero .frame{animation:up .9s .3s ease both}
+@keyframes up{to{opacity:1;transform:none}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+/* facts */
+.facts{background:var(--panel);border-block:1px solid var(--line);padding:26px 0}
+.facts ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.facts li{display:flex;gap:12px;align-items:center;font-size:.95rem;color:var(--txt)}
+.facts .msr{color:var(--gold);flex:none}
+@media(max-width:900px){.facts ul{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.facts ul{grid-template-columns:1fr}}
+/* why */
+.why .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+.why h2{position:sticky;top:110px;align-self:start}
+.row{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid #D3D8EA}
+.row:first-child{padding-top:0}.row:last-child{border:0}
+.row .msr{color:var(--gold-d);font-size:30px;flex:none}
+.row p{margin-top:6px}
+@media(max-width:900px){.why .wrap{grid-template-columns:1fr;gap:32px}.why h2{position:static}}
+/* services */
+.head{margin-bottom:48px}.head p{margin-top:14px;color:var(--mute)}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.g{border-top:3px solid var(--gold);padding-top:22px}
+.g h3{font-size:1.4rem;margin-bottom:4px}
+.g>p{color:var(--mute);font-size:.95rem;margin-bottom:18px}
+.g ul{list-style:none;padding:0}
+.g li{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.g li .msr{color:var(--gold);flex:none;margin-top:2px}
+.g li b{display:block;color:#fff;font-weight:600}
+.g li span.d{font-size:.93rem;color:var(--mute);display:block;margin-top:2px}
+.pill{display:inline-block;margin-left:8px;font-size:.75rem;font-weight:600;color:var(--night);background:var(--gold);border-radius:99px;padding:2px 10px;vertical-align:middle}
+.note{margin-top:36px;color:var(--mute);font-size:.95rem}
+@media(max-width:960px){.groups{grid-template-columns:1fr}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;list-style:none;padding:0;margin-top:44px}
+.steps li{position:relative;padding:28px 22px 0 0;border-top:2px solid #C3C9E0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font:700 .95rem 'Space Grotesk';display:grid;place-items:center}
+.steps small{display:block;color:var(--gold-d);font-weight:600;margin:4px 0 8px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;row-gap:44px}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+/* work */
+.proj{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-bottom:72px}
+.proj:nth-of-type(even){grid-template-columns:.9fr 1.1fr}
+.proj:nth-of-type(even) .shot{order:2}
+.shot{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:16/10}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.proj .kind{color:var(--gold);font-weight:600;font-size:.95rem;margin-bottom:8px}
+.proj h3{font-size:1.8rem;margin-bottom:12px}
+.proj ul{list-style:none;padding:0;margin-top:16px;display:grid;gap:8px}
+.proj li{display:flex;gap:10px;align-items:center;font-size:.95rem}
+.proj li .msr{color:var(--gold);font-size:20px}
+blockquote{border-left:3px solid var(--gold);padding:6px 0 6px 24px;max-width:720px}
+blockquote p{font:500 1.35rem/1.45 'Space Grotesk';color:#fff}
+blockquote footer{margin-top:14px;color:var(--mute);font-size:.95rem;padding:0}
+@media(max-width:860px){.proj,.proj:nth-of-type(even){grid-template-columns:1fr;gap:24px}.proj:nth-of-type(even) .shot{order:0}}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+.plan{background:#fff;border:1px solid #D3D8EA;border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.plan.hot{background:var(--ink);color:var(--txt);border-color:var(--ink);transform:translateY(-10px)}
+.plan.hot h3{color:#fff}
+.plan .who{font-size:.95rem;margin:6px 0 18px}
+.plan ul{list-style:none;padding:0;margin-bottom:26px;display:grid;gap:10px;flex:1}
+.plan li{display:flex;gap:10px;font-size:.96rem}
+.plan li .msr{font-size:20px;color:var(--gold-d);flex:none}
+.plan.hot li .msr{color:var(--gold)}
+.plan .btn{justify-content:center}
+.plan:not(.hot) .btn.s{color:var(--ink);border-color:var(--ink)}
+@media(max-width:900px){.plans{grid-template-columns:1fr}.plan.hot{transform:none}}
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.badge{aspect-ratio:1;max-width:340px;border-radius:50%;border:1px solid var(--line);background:radial-gradient(circle at 30% 30%,var(--panel),var(--night));display:grid;place-items:center;position:relative;overflow:hidden}
+.badge img{width:56%;border-radius:14px;background:#fff;padding:10px}
+.about p+p{margin-top:16px}
+@media(max-width:860px){.about .wrap{grid-template-columns:1fr}.badge{max-width:220px}}
+/* faq */
+details{border-bottom:1px solid #C9CFE4;padding:20px 0;max-width:820px}
+summary{cursor:pointer;font:500 1.1rem 'Space Grotesk';color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--gold-d);font-size:1.5rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ways{list-style:none;padding:0;margin-top:28px;display:grid;gap:16px}
+.ways li{display:flex;gap:14px;align-items:center}
+.ways .msr{color:var(--gold)}
+.ways a{text-decoration:none;font-weight:500}.ways a:hover{color:var(--gold)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem;color:#fff}
+input,select,textarea{font:inherit;color:#fff;background:var(--night);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+textarea{min-height:100px;resize:vertical}
+form .btn{justify-content:center}
+form small{color:var(--mute)}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+/* footer */
+footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px #000;text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#top" aria-label="LNX inicio"><img src="assets/images/logo.jpg" alt="LNX" height="40"></a>
+  <ul>
+    <li><a class="l" href="#servicios">Servicios</a></li>
+    <li><a class="l" href="#proyectos">Proyectos</a></li>
+    <li><a class="l" href="#paquetes">Paquetes</a></li>
+    <li><a class="l" href="#nosotros">Nosotros</a></li>
+    <li><a class="btn p" href="#contacto">Cotizar</a></li>
+  </ul>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag in">Software y presencia digital para negocios locales</span>
+    <h1 class="in">Que tus clientes te encuentren, te escriban y te pidan.</h1>
+    <p class="sub in">Creamos tu página web, tu menú digital, tu perfil de Google y los sistemas de pedidos, citas y atención por WhatsApp que tu negocio necesita para vender más.</p>
+    <div class="cta in">
+      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener"><span class="msr" aria-hidden="true">chat</span>Cotizar por WhatsApp</a>
+      <a class="btn s" href="#proyectos">Ver proyectos</a>
+    </div>
+  </div>
+  <div class="frame">
+    <video src="assets/lnx-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <span class="moon" aria-hidden="true"></span>
+  </div>
+</div></section>
+
+<div class="facts"><div class="wrap"><ul>
+  <li><span class="msr" aria-hidden="true">schedule</span>Tu página lista en 7 a 10 días</li>
+  <li><span class="msr" aria-hidden="true">chat</span>Respuesta por WhatsApp el mismo día</li>
+  <li><span class="msr" aria-hidden="true">verified_user</span>Tu dominio y tu contenido son tuyos</li>
+  <li><span class="msr" aria-hidden="true">location_on</span>Trabajamos con negocios de Jalisco</li>
+</ul></div></div>
+
+<section class="light why"><div class="wrap">
+  <h2>Tu negocio ya existe. Falta que se vea en internet.</h2>
+  <div>
+    <div class="row"><span class="msr" aria-hidden="true">search</span><div><h3>Te encuentran en Google</h3><p>Si buscan lo que vendes y no apareces en el mapa, esos clientes compran en otro lado. Optimizamos tu perfil de Google y tu página para aparecer.</p></div></div>
+    <div class="row"><span class="msr" aria-hidden="true">forum</span><div><h3>Te escriben listos para comprar</h3><p>Catálogo, menú y botones de WhatsApp con el mensaje ya armado. Menos preguntas repetidas y más pedidos claros.</p></div></div>
+    <div class="row"><span class="msr" aria-hidden="true">workspace_premium</span><div><h3>Inspiras confianza desde el primer vistazo</h3><p>Una página propia con tu marca dice más de tu negocio que un perfil de red social, y no depende de un algoritmo.</p></div></div>
+  </div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+  <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Empieza por lo básico y suma sistemas conforme crezcas.</p></div>
+  <div class="groups">
+    <div class="g"><h3>Presencia</h3><p>Que te vean y te reconozcan.</p><ul>
+      <li><span class="msr" aria-hidden="true">web</span><div><b>Páginas web a medida</b><span class="d">Landing pages, catálogos y sitios para tu negocio, rápidos y listos para celular.</span></div></li>
+      <li><span class="msr" aria-hidden="true">storefront</span><div><b>Perfil de Google Business</b><span class="d">Mapa, fotos, horarios y reseñas gestionadas para que te encuentren cerca.</span></div></li>
+      <li><span class="msr" aria-hidden="true">qr_code_2</span><div><b>QRs estratégicos</b><span class="d">Para pedir reseñas, abrir tu menú o escribirte con un escaneo.</span></div></li>
+      <li><span class="msr" aria-hidden="true">draw</span><div><b>Identidad de marca</b><span class="d">Logo, colores y material visual consistente.</span></div></li>
+    </ul></div>
+    <div class="g"><h3>Ventas y pedidos</h3><p>Que comprar sea fácil.</p><ul>
+      <li><span class="msr" aria-hidden="true">restaurant_menu</span><div><b>Menús digitales</b><span class="d">Con fotos y precios, fáciles de actualizar, accesibles con un QR en la mesa.</span></div></li>
+      <li><span class="msr" aria-hidden="true">shopping_bag</span><div><b>Pedidos por WhatsApp</b><span class="d">El cliente arma su pedido en la página y te llega listo por mensaje.</span></div></li>
+      <li><span class="msr" aria-hidden="true">inventory_2</span><div><b>Catálogo digital</b><span class="d">Tus productos y disponibilidad a la vista antes de que vayan a la tienda.</span></div></li>
+    </ul></div>
+    <div class="g"><h3>Automatización</h3><p>Que tu negocio atienda mientras trabajas.</p><ul>
+      <li><span class="msr" aria-hidden="true">event_available</span><div><b>Agenda de citas<span class="pill">Cupo piloto</span></b><span class="d">El cliente elige servicio y horario libre sin esperar tu respuesta.</span></div></li>
+      <li><span class="msr" aria-hidden="true">notifications_active</span><div><b>Recordatorios por WhatsApp<span class="pill">Cupo piloto</span></b><span class="d">Un aviso antes de la cita para reducir los clientes que no llegan.</span></div></li>
+      <li><span class="msr" aria-hidden="true">smart_toy</span><div><b>Atención automática 24/7<span class="pill">Cupo piloto</span></b><span class="d">Respuestas a horarios, ubicación, precios y formas de pago a cualquier hora.</span></div></li>
+    </ul></div>
+  </div>
+  <p class="note">Los servicios con "Cupo piloto" los estamos abriendo con los primeros negocios, con precio especial a cambio de tu opinión.</p>
+</div></section>
+
+<section class="light" id="proceso"><div class="wrap">
+  <h2>Así trabajamos contigo</h2>
+  <ol class="steps">
+    <li><h3>Diagnóstico</h3><small>Día 1 a 2</small><p>Platicamos de tu negocio, tus clientes y qué quieres lograr.</p></li>
+    <li><h3>Diseño</h3><small>Día 3 a 5</small><p>Te mostramos cómo se verá, con tu marca. Ajustas lo que no te guste.</p></li>
+    <li><h3>Desarrollo</h3><small>Día 6 a 9</small><p>Construimos tu sitio y lo probamos en celular y computadora.</p></li>
+    <li><h3>Lanzamiento</h3><small>Día 10</small><p>Lo publicamos, conectamos tu dominio y te enseñamos a usarlo. Incluye una ronda de ajustes.</p></li>
+  </ol>
+  <p style="margin-top:36px">Solo necesitas darnos tu logo, fotos, menú o lista de productos y tus datos de contacto. Lo demás lo hacemos nosotros.</p>
+</div></section>
+
+<section id="proyectos"><div class="wrap">
+  <div class="head"><h2>Proyectos recientes</h2></div>
+  <article class="proj">
+    <div class="shot"><img src="assets/images/taqueria-luna.png" alt="Sitio web de Taquería Luna en modo nocturno" loading="lazy"></div>
+    <div><p class="kind">Restaurante</p><h3>Taquería Luna</h3>
+      <p>Sitio completo con menú interactivo, pedidos directos por WhatsApp, galería del espacio y ubicación. Diseño nocturno que refleja la marca.</p>
+      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Menú interactivo</li><li><span class="msr" aria-hidden="true">check_circle</span>Pedidos por WhatsApp</li><li><span class="msr" aria-hidden="true">check_circle</span>Ubicación y galería</li></ul></div>
+  </article>
+  <article class="proj">
+    <div class="shot"><img src="assets/images/el-carboncito.png" alt="Landing page de El Carboncito" loading="lazy"></div>
+    <div><p class="kind">Comida a domicilio</p><h3>El Carboncito</h3>
+      <p>Landing page enfocada en que el cliente pida: menú completo, pedido en 3 pasos, testimonios y preguntas frecuentes.</p>
+      <ul><li><span class="msr" aria-hidden="true">check_circle</span>Pedido en 3 pasos</li><li><span class="msr" aria-hidden="true">check_circle</span>Testimonios y FAQ</li><li><span class="msr" aria-hidden="true">check_circle</span>Contacto directo por WhatsApp</li></ul></div>
+  </article>
+  <blockquote><p>Me encantó cómo quedó. Se ve muy padre y me ha facilitado muchísimo poder mostrarle mi negocio a los clientes.</p><footer>Katya, propietaria de El Carboncito</footer></blockquote>
+</div></section>
+
+<section class="light" id="paquetes"><div class="wrap">
+  <h2>Paquetes</h2>
+  <p style="margin-top:12px">Elige un punto de partida. Te enviamos una cotización clara, sin costos escondidos.</p>
+  <!-- Agrega aquí tus precios, por ejemplo: <p class="who">Desde $X MXN</p> -->
+  <div class="plans">
+    <div class="plan"><h3>Presencia básica</h3><p class="who">Para empezar a existir en internet.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Landing page de una sección</li><li><span class="msr" aria-hidden="true">check</span>Botón de WhatsApp con mensaje armado</li><li><span class="msr" aria-hidden="true">check</span>Mapa y datos de contacto</li><li><span class="msr" aria-hidden="true">check</span>Dominio conectado</li></ul>
+      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
+    <div class="plan hot"><h3>Presencia completa</h3><p class="who">Para negocios que quieren más clientes.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Sitio completo con catálogo o menú</li><li><span class="msr" aria-hidden="true">check</span>Perfil de Google Business optimizado</li><li><span class="msr" aria-hidden="true">check</span>QR de reseñas y de menú</li><li><span class="msr" aria-hidden="true">check</span>Identidad visual básica</li></ul>
+      <a class="btn p" href="#contacto">Cotizar este paquete</a></div>
+    <div class="plan"><h3>Automatización</h3><p class="who">Para ahorrar tiempo y no perder citas.</p><ul>
+      <li><span class="msr" aria-hidden="true">check</span>Agenda de citas en línea</li><li><span class="msr" aria-hidden="true">check</span>Recordatorios por WhatsApp</li><li><span class="msr" aria-hidden="true">check</span>Respuestas automáticas a preguntas frecuentes</li><li><span class="msr" aria-hidden="true">check</span>Se suma a cualquier paquete</li></ul>
+      <a class="btn s" href="#contacto">Cotizar este paquete</a></div>
+  </div>
+  <p style="margin-top:28px">Mantenimiento mensual opcional: actualizaciones de contenido, respaldo y soporte por WhatsApp.</p>
+</div></section>
+
+<section class="about" id="nosotros"><div class="wrap">
+  <div class="badge"><img src="assets/images/logo.jpg" alt="Logo de LNX" loading="lazy"></div>
+  <div>
+    <h2>Quiénes somos</h2>
+    <p style="margin-top:18px">LNX es un estudio de software y presencia digital de Jalisco. Fundado por Victor, estudiante de Ingeniería en Sistemas, nació para que los negocios locales tengan herramientas digitales que antes solo usaban las empresas grandes.</p>
+    <p>Trabajamos de forma cercana: hablas directo con quien construye tu proyecto, sin intermediarios ni tecnicismos. Si algo no se entiende, lo explicamos.</p>
+    <!-- Agrega aquí tu foto y una frase personal para generar más confianza -->
+  </div>
+</div></section>
+
+<section class="light" id="faq"><div class="wrap">
+  <h2 style="margin-bottom:32px">Preguntas frecuentes</h2>
+  <details><summary>¿De quién es el dominio y la página?</summary><p>Tuyos. Registramos el dominio a tu nombre y te entregamos acceso a tu contenido.</p></details>
+  <details><summary>¿Cuánto tarda mi página?</summary><p>Una landing básica toma de 7 a 10 días desde que nos entregas logo, fotos y datos. Proyectos con más secciones o sistemas toman más; te damos la fecha al cotizar.</p></details>
+  <details><summary>¿Puedo pedir cambios después de lanzar?</summary><p>Sí. Incluimos una ronda de ajustes al lanzamiento, y con el plan de mantenimiento puedes pedir actualizaciones cuando las necesites.</p></details>
+  <details><summary>¿Se ve bien en celular?</summary><p>Sí. Probamos cada sitio en celular, tableta y computadora antes de entregarlo.</p></details>
+  <details><summary>¿Cómo se paga?</summary><p>Se acuerda en la cotización, normalmente con un anticipo para empezar y el resto al entregar. Todo queda por escrito.</p></details>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+  <div>
+    <h2>Cuéntanos de tu negocio</h2>
+    <p style="margin-top:16px">Respondemos el mismo día. La cotización es gratis y sin compromiso.</p>
+    <ul class="ways">
+      <li><span class="msr" aria-hidden="true">chat</span><a href="https://wa.me/523323507197" target="_blank" rel="noopener">WhatsApp: 33 2350 7197</a></li>
+      <li><span class="msr" aria-hidden="true">mail</span><a href="mailto:lunxx12@gmail.com">lunxx12@gmail.com</a></li>
+      <li><span class="msr" aria-hidden="true">location_on</span>Jalisco, México</li>
+    </ul>
+  </div>
+  <form id="f">
+    <label>Tu nombre<input name="n" required autocomplete="name"></label>
+    <label>Tipo de negocio<select name="t"><option>Restaurante o cafetería</option><option>Tienda o comercio</option><option>Servicios (estética, taller, consultorio)</option><option>Otro</option></select></label>
+    <label>¿Qué necesitas?<textarea name="m" placeholder="Ej. una página con menú y pedidos por WhatsApp"></textarea></label>
+    <button class="btn p" type="submit"><span class="msr" aria-hidden="true">send</span>Enviar por WhatsApp</button>
+    <small>Se abrirá WhatsApp con tu mensaje listo para enviar.</small>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div>© 2026 LNX Digital Agency. Todos los derechos reservados.</div>
+  <nav><a href="terminos.html">Términos de servicio</a><a href="privacidad.html">Política de privacidad</a><a href="https://wa.me/523323507197">WhatsApp</a><!-- Agrega tus redes: Instagram, Facebook --></nav>
+</div></footer>
+
+<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><span class="msr" aria-hidden="true" style="font-size:30px">chat</span></a>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();var d=new FormData(this);
+  var t='Hola LNX, soy '+d.get('n')+'. Mi negocio es: '+d.get('t')+'.'+(d.get('m')?' Necesito: '+d.get('m'):'');
+  window.open('https://wa.me/523323507197?text='+encodeURIComponent(t),'_blank','noopener');
+});
+</script>
+</body>
+</html>
