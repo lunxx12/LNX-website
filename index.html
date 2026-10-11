@@ -413,7 +413,25 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
 .pm{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 .bm.pm-on svg{opacity:0;animation:none}
 .bm.pm-on{background:radial-gradient(circle at 42% 50%,rgba(201,169,106,.09),transparent 60%)}
-@media(prefers-reduced-motion:reduce){.pl{animation:none!important}.rvw .w{opacity:1}.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+
+/* v13: rueda fluida y viaje con luna de partículas */
+.wc{transition:box-shadow .4s;will-change:transform,opacity;touch-action:pan-y;user-select:none}
+.wc::after{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.42),transparent 55%);opacity:0;transition:opacity .3s;pointer-events:none}.wc.on::after{opacity:1}
+.wctl{z-index:200}
+.wheel{cursor:grab}.wheel:active{cursor:grabbing}
+.wheel::before{content:'';position:absolute;inset:10% 0;background:radial-gradient(ellipse at 50% 50%,rgba(201,169,106,.13),transparent 65%);animation:wp 5s ease-in-out infinite;pointer-events:none}@keyframes wp{50%{opacity:.45}}
+.wtr{position:absolute;border:1px dashed rgba(201,169,106,.32);border-radius:50%;pointer-events:none}
+.fs{position:absolute;width:4px;height:4px;border-radius:50%;background:#E2C58D;box-shadow:0 0 8px #E2C58D;opacity:0;animation:fsx 6s linear infinite;pointer-events:none}@keyframes fsx{0%{opacity:0;transform:translateY(0)}20%{opacity:.9}100%{opacity:0;transform:translateY(-130px)}}
+.wpb{display:block;width:34px;height:3px;border-radius:3px;background:rgba(154,163,199,.3);overflow:hidden}.wpb b{display:block;height:100%;width:0;background:var(--gold)}
+.det{position:relative;overflow:hidden}
+.det::before{content:'';position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,var(--ac,rgba(201,169,106,.22)),transparent 70%);transition:background .6s;pointer-events:none}
+.det>*{position:relative}
+.det .bn{position:absolute;right:20px;bottom:4px;font:700 7.5rem/1 'Space Grotesk';color:rgba(255,255,255,.045);pointer-events:none}
+.det.sw .di{animation:pp .65s cubic-bezier(.3,1.5,.5,1)}@keyframes pp{from{transform:scale(.4) rotate(-24deg);opacity:0}}
+.det.sw h3{animation:su .55s .05s both}.det.sw .pt{animation:su .55s .12s both}.det.sw .ds{animation:su .55s .18s both}
+.det.sw li{animation:su .5s calc(.25s + var(--k)*.08s) both}.det.sw .wh{animation:su .5s .62s both}.det.sw .btn{animation:su .5s .7s both}
+@keyframes su{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){.fs,.wheel::before{animation:none!important}.pl{animation:none!important}.rvw .w{opacity:1}.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -498,7 +516,8 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
   <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Gira la rueda y elige un servicio para ver qué incluye.</p></div>
   <div class="svc">
     <div class="wheel" id="wheel" tabindex="0" aria-label="Servicios">
-      <div class="wctl"><button type="button" id="wup" aria-label="Servicio anterior"><span class="msr" aria-hidden="true">keyboard_arrow_up</span></button><span id="wct">01 / 08</span><button type="button" id="wdn" aria-label="Servicio siguiente"><span class="msr" aria-hidden="true">keyboard_arrow_down</span></button></div>
+      <span class="wtr" id="wtr" aria-hidden="true"></span><span class="fs" style="left:35%;top:72%;animation-delay:-3.3s;animation-duration:6.5s"></span><span class="fs" style="left:82%;top:65%;animation-delay:-3.8s;animation-duration:5.3s"></span><span class="fs" style="left:6%;top:93%;animation-delay:-5.0s;animation-duration:6.0s"></span><span class="fs" style="left:34%;top:47%;animation-delay:-6.0s;animation-duration:6.9s"></span><span class="fs" style="left:75%;top:65%;animation-delay:-2.4s;animation-duration:8.4s"></span><span class="fs" style="left:34%;top:75%;animation-delay:-0.9s;animation-duration:8.7s"></span><span class="fs" style="left:54%;top:82%;animation-delay:-0.1s;animation-duration:8.1s"></span><span class="fs" style="left:25%;top:83%;animation-delay:-5.7s;animation-duration:5.2s"></span><span class="fs" style="left:8%;top:87%;animation-delay:-5.2s;animation-duration:6.9s"></span><span class="fs" style="left:54%;top:80%;animation-delay:-4.7s;animation-duration:6.7s"></span><span class="fs" style="left:78%;top:63%;animation-delay:-5.8s;animation-duration:5.5s"></span><span class="fs" style="left:51%;top:41%;animation-delay:-0.2s;animation-duration:7.0s"></span><span class="fs" style="left:38%;top:78%;animation-delay:-2.6s;animation-duration:7.5s"></span><span class="fs" style="left:43%;top:61%;animation-delay:-3.0s;animation-duration:6.5s"></span>
+      <div class="wctl"><button type="button" id="wup" aria-label="Servicio anterior"><span class="msr" aria-hidden="true">keyboard_arrow_up</span></button><span id="wct">01 / 08</span><i class="wpb" aria-hidden="true"><b id="wpb"></b></i><button type="button" id="wdn" aria-label="Servicio siguiente"><span class="msr" aria-hidden="true">keyboard_arrow_down</span></button></div>
     </div>
     <article class="det" id="det" aria-live="polite"></article>
   </div>
@@ -630,20 +649,32 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
 }
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){var wv=document.querySelector('.wv svg');if(wv&&wv.pauseAnimations)wv.pauseAnimations()}
 
-(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],w=document.getElementById('wheel'),d=document.getElementById('det'),ct=document.getElementById('wct'),n=SV.length,act=0,u=false,t,cs=[];
-SV.forEach(function(s,i){var c=document.createElement('button');c.type='button';c.className='wc c'+(i%3);c.setAttribute('aria-label',s.t);c.innerHTML='<span class="n">0'+(i+1)+'</span><span class="msr" aria-hidden="true">'+s.i+'</span><b>'+s.t+'</b><small>'+s.p+'</small>';c.addEventListener('click',function(){go(i,true)});w.appendChild(c);cs.push(c)});
-function lay(){var cw=w.clientWidth,W=Math.min(430,cw*.72),H=W*.58,R=H*2.3;cs.forEach(function(c,i){var o=i-act;if(o>n/2)o-=n;if(o<-n/2)o+=n;var a=o*21,r=a*Math.PI/180,ab=Math.abs(o);
-c.style.width=W+'px';c.style.height=H+'px';c.style.opacity=ab>3?0:1-ab*.16;c.style.zIndex=10-ab;c.style.pointerEvents=ab>3?'none':'auto';
-c.style.transform='translate(-50%,-50%) translate('+(-R*(1-Math.cos(r)))+'px,'+(R*Math.sin(r))+'px) rotate('+a+'deg) scale('+(1-ab*.04)+')';c.classList.toggle('on',o===0);c.tabIndex=o===0?0:-1})}
-function show(sw){var s=SV[act];ct.textContent='0'+(act+1)+' / 0'+n;
-d.innerHTML='<div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p>'+s.d+'</p><ul>'+s.b.map(function(x){return '<li><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('👋 *Hola LNX*\n\nMe interesa el servicio de *'+s.t+'*.\n¿Me pueden dar más información y una cotización?')+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
+(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],w=document.getElementById('wheel'),d=document.getElementById('det'),ct=document.getElementById('wct'),tr=document.getElementById('wtr'),pb=document.getElementById('wpb'),n=SV.length,cs=[],pos=0,tg=0,cur=-1,u=false,hov=false,dg=null,auto=0,vis=false,lt=0,W,H,R,sp,mx=0,my=0,tx=0,ty=0,moved=false,first=true,go0=true,rm=matchMedia('(prefers-reduced-motion:reduce)').matches,AC=['rgba(201,169,106,.24)','rgba(90,120,255,.2)','rgba(238,240,247,.14)'];
+SV.forEach(function(s,i){var c=document.createElement('button');c.type='button';c.className='wc c'+(i%3);c.setAttribute('aria-label',s.t);c.innerHTML='<span class="n">0'+(i+1)+'</span><span class="msr" aria-hidden="true">'+s.i+'</span><b>'+s.t+'</b><small>'+s.p+'</small>';c.addEventListener('click',function(){if(moved){moved=false;return}u=true;var dl=i-cur;dl-=n*Math.round(dl/n);tg=Math.round(pos)+dl});w.appendChild(c);cs.push(c)});
+function size(){var cw=w.clientWidth,ch=w.clientHeight;W=Math.min(430,cw*.72);H=W*.58;R=H*2.3;sp=R*.3665;cs.forEach(function(c){c.style.width=W+'px';c.style.height=H+'px'});tr.style.width=tr.style.height=(R*2)+'px';tr.style.left=(cw/2-2*R)+'px';tr.style.top=(ch/2-R)+'px'}
+function show(sw){var s=SV[cur];ct.textContent='0'+(cur+1)+' / 0'+n;d.style.setProperty('--ac',AC[cur%3]);
+d.innerHTML='<span class="bn">0'+(cur+1)+'</span><div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p class="ds">'+s.d+'</p><ul>'+s.b.map(function(x,k){return '<li style="--k:'+k+'"><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('👋 *Hola LNX*\n\nMe interesa el servicio de *'+s.t+'*.\n¿Me pueden dar más información y una cotización?')+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
 if(sw){d.classList.remove('sw');void d.offsetWidth;d.classList.add('sw')}}
-function go(i,usr){act=(i+n)%n;if(usr){u=true;clearInterval(t)}lay();show(true)}
-document.getElementById('wup').onclick=function(){go(act-1,true)};document.getElementById('wdn').onclick=function(){go(act+1,true)};
-w.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();go(act+1,true)}if(e.key==='ArrowUp'){e.preventDefault();go(act-1,true)}});
-var y0=null;w.addEventListener('pointerdown',function(e){y0=e.clientY});w.addEventListener('pointerup',function(e){if(y0!==null&&Math.abs(e.clientY-y0)>45)go(act+(e.clientY<y0?1:-1),true);y0=null});
-addEventListener('resize',lay);lay();show(false);
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){if(!u&&!w.matches(':hover'))go(act+1,false)},5000);
+function nav(k){u=true;tg=Math.round(tg)+k}
+document.getElementById('wup').onclick=function(){nav(-1)};document.getElementById('wdn').onclick=function(){nav(1)};
+w.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();nav(1)}if(e.key==='ArrowUp'){e.preventDefault();nav(-1)}});
+w.addEventListener('mouseenter',function(){hov=true});w.addEventListener('mouseleave',function(){hov=false;mx=my=0});
+w.addEventListener('pointermove',function(e){var r=w.getBoundingClientRect();mx=Math.max(-1,Math.min(1,(e.clientX-r.left-r.width/2)/(W/2)));my=Math.max(-1,Math.min(1,(e.clientY-r.top-r.height/2)/(H/2)))});
+w.addEventListener('pointerdown',function(e){if(e.target.closest('.wctl'))return;dg={x:e.clientX,y:e.clientY,p0:pos,lp:pos,lv:0,tc:e.pointerType==='touch'};moved=false});
+addEventListener('pointermove',function(e){if(!dg)return;var dd=dg.tc?(dg.x-e.clientX):(dg.y-e.clientY);if(Math.abs(dd)>6)moved=true;if(moved){pos=dg.p0+dd/sp;tg=pos;u=true;dg.lv=pos-dg.lp;dg.lp=pos}});
+addEventListener('pointerup',function(){if(!dg)return;if(moved)tg=Math.round(pos+dg.lv*9);dg=null});
+function tick(t){if(!vis)return;var dt=Math.min(50,t-lt||16);lt=t;
+ if(!dg){pos+=(tg-pos)*(rm?1:.11);if(Math.abs(tg-pos)<.0008)pos=tg}
+ if(!u&&!hov&&!dg&&!rm){auto+=dt;if(auto>=5200){auto=0;tg=Math.round(tg)+1}}
+ pb.style.width=(u?0:auto/52)+'%';tx+=(mx-tx)*.1;ty+=(my-ty)*.1;
+ var rp=Math.round(pos),c0=((rp%n)+n)%n;if(c0!==cur){cur=c0;show(!first);first=false}
+ for(var i=0;i<n;i++){var c=cs[i],o=i-pos;o-=n*Math.round(o/n);var ab=Math.abs(o),a=o*21,r=a*Math.PI/180,act=ab<.5,
+  tf='translate(-50%,-50%) translate('+(-R*(1-Math.cos(r))).toFixed(1)+'px,'+(R*Math.sin(r)+(act&&!rm?Math.sin(t/900)*3:0)).toFixed(1)+'px) rotate('+a.toFixed(2)+'deg) scale('+(1-Math.min(ab,3)*.045).toFixed(3)+')';
+  if(ab<1){var k=1-ab;tf+=' perspective(900px) rotateX('+(-ty*7*k).toFixed(2)+'deg) rotateY('+(tx*9*k).toFixed(2)+'deg)';c.style.setProperty('--gx',(50+tx*42)+'%');c.style.setProperty('--gy',(50+ty*42)+'%')}
+  c.style.transform=tf;c.style.opacity=ab>3.3?0:Math.max(0,1-Math.max(0,ab-.6)*.2).toFixed(3);c.style.filter=ab>1.3?'blur('+((ab-1.3)*1.3).toFixed(2)+'px)':'none';c.style.zIndex=50-Math.round(ab*10);c.style.pointerEvents=ab>3?'none':'auto';c.classList.toggle('on',act);c.tabIndex=act?0:-1}
+ tr.style.transform='rotate('+(-pos*21)+'deg)';requestAnimationFrame(tick)}
+size();addEventListener('resize',size);
+new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis){if(go0){go0=false;if(!rm)pos=-3.2}requestAnimationFrame(tick)}},{threshold:.15}).observe(w);
 })();
 var spy=document.querySelectorAll('.nav a.l'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)spy.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
 ['servicios','proyectos','paquetes','nosotros'].forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
@@ -675,29 +706,45 @@ function rail(){var m=document.documentElement.scrollHeight-innerHeight,v=m>0?Ma
 addEventListener('scroll',rail,{passive:true});rail();
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){sec.classList.add('static');return}
 var c=sec.querySelector('.vj-c'),x=c.getContext('2d'),mo=sec.querySelector('.vj-m'),st=sec.querySelectorAll('.st'),sc=sec.querySelectorAll('.sc'),dots=sec.querySelectorAll('.vj-dots i'),ob=document.getElementById('vo'),ry=document.getElementById('vr'),fl=document.getElementById('vf'),vs=sec.querySelector('.vj-s'),vsc=document.getElementById('vsc'),
-dpr=Math.min(devicePixelRatio||1,2),W,H,S=[],N=innerWidth<700?150:380,Z=1200,p=0,np0=0,sp=0,vis=false,on=-1,B=[],ring={r:0,a:0},mx=0,my=0,pmx=0,pmy=0,CL=[[22,32,74],[32,28,88],[46,38,72]],MX=innerWidth<700?.6:.7;
+dpr=Math.min(devicePixelRatio||1,2),W,H,S=[],BG=[],N=innerWidth<700?170:480,Z=1200,p=0,np0=0,sp=0,vis=false,on=-1,B=[],ring={r:0,a:0},mx=0,my=0,pmx=0,pmy=0,CL=[[22,32,74],[32,28,88],[46,38,72]],MX=innerWidth<700?.6:.7,
+MP=[],M0=520,exT=0,init=true,pal=['#F6E3B0','#EBD296','#DCBF86','#C9A96A','#B08F50','#8A6B2A'];
 function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
 rs();addEventListener('resize',rs);
 for(var i=0;i<N;i++)S.push({x:(Math.random()-.5)*2600,y:(Math.random()-.5)*2600,z:Math.random()*Z,g:Math.random()<.3});
+for(var i=0,nb=innerWidth<700?80:220;i<nb;i++)BG.push({x:Math.random(),y:Math.random(),r:.5+Math.random()*1.3,ph:Math.random()*6.3,s:.6+Math.random()*1.8,g:Math.random()<.25,dp:.2+Math.random()*.8});
+(function(){var o=document.createElement('canvas');o.width=o.height=200;var q=o.getContext('2d');q.fillStyle='#000';q.beginPath();q.arc(95,100,86,0,6.2832);q.fill();q.globalCompositeOperation='destination-out';q.beginPath();q.arc(130,92,74,0,6.2832);q.fill();
+ var d=q.getImageData(0,0,200,200).data;function A(i,j){return i<0||j<0||i>199||j>199?0:d[(j*200+i)*4+3]}
+ function add(i,j){MP.push({a:(i-100)/200*M0,b:(j-100)/200*M0,x:0,y:0,vx:0,vy:0,w:0,r:1.1+Math.random()*1.5,ph:Math.random()*6.3,bk:Math.max(0,Math.min(5,Math.floor((i+j)/400*6)))})}
+ var st=innerWidth<700?3.3:1.9;for(var j=0;j<200;j+=st)for(var i=0;i<200;i+=st){var a=i+(Math.random()-.5)*st,b=j+(Math.random()-.5)*st;if(A(a|0,b|0)>128)add(a,b)}
+ for(var j2=0;j2<200;j2++)for(var i2=0;i2<200;i2++){if(A(i2,j2)>128&&(A(i2+2,j2)<128||A(i2-2,j2)<128||A(i2,j2+2)<128||A(i2,j2-2)<128)&&Math.random()<.22)add(i2,j2)}
+ MP.sort(function(a,b){return a.bk-b.bk})})();
 sec.addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
 function prog(){var r=sec.getBoundingClientRect(),t=r.height-innerHeight;return Math.min(1,Math.max(0,-r.top/t))}
-function burst(){var cx=W*MX,cy=H/2;for(var i=0;i<54;i++){var a=Math.random()*6.283,v=2+Math.random()*8;B.push({x:cx,y:cy,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,g:Math.random()<.65})}ring.r=30;ring.a=.9}
-function f(){if(!vis)return;var np=prog();sp=sp*.85+(np-np0)*.15;np0=np;p+=(np-p)*.12;pmx+=(mx-pmx)*.06;pmy+=(my-pmy)*.06;
+function burst(NOW){var cx=W*MX,cy=H/2;for(var i=0;i<60;i++){var a=Math.random()*6.283,v=2+Math.random()*9;B.push({x:cx,y:cy,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,g:Math.random()<.65})}ring.r=30;ring.a=.9;
+ MP.forEach(function(q){var dx=q.x-cx,dy=q.y-cy,dl=Math.hypot(dx,dy)||1,k=14+Math.random()*30;q.vx+=dx/dl*k+(Math.random()-.5)*14;q.vy+=dy/dl*k+(Math.random()-.5)*14;q.w=NOW+.5+Math.random()*.6});exT=NOW}
+function f(tt){if(!vis)return;var NOW=tt/1000,np=prog();sp=sp*.85+(np-np0)*.15;np0=np;p+=(np-p)*.12;pmx+=(mx-pmx)*.06;pmy+=(my-pmy)*.06;
  var cam=p*3000,L=Math.min(460,Math.abs(sp)*95000)+6,F=Math.min(W,H)*.95,cx=W*MX,cy=H/2;x.clearRect(0,0,W,H);
+ for(var i=0;i<BG.length;i++){var g=BG[i],bx=((g.x*W-p*70*g.dp)%W+W)%W;x.globalAlpha=.2+.6*Math.abs(Math.sin(NOW*g.s+g.ph));x.fillStyle=g.g?'#E2C58D':'#fff';x.fillRect(bx,g.y*H,g.r,g.r)}
  for(var i=0;i<N;i++){var s=S[i],z=((s.z-cam)%Z+Z)%Z;if(z<20)continue;var a=1-z/Z,sx=cx+s.x/z*F,sy=cy+s.y/z*F,tz=z+L,tx=cx+s.x/tz*F,ty=cy+s.y/tz*F;
   if(sx<-50||sx>W+50||sy<-50||sy>H+50)continue;x.globalAlpha=Math.min(1,a*1.3);x.strokeStyle=s.g?'#E2C58D':'#fff';x.lineWidth=.8+a*1.8;x.lineCap='round';x.beginPath();x.moveTo(tx,ty);x.lineTo(sx,sy);x.stroke()}
- x.globalCompositeOperation='lighter';
+ var ms=.2+Math.pow(p,1.35)*1.75,op=p<.04?p*25:1-Math.max(0,p-.9)*8;op=Math.max(0,Math.min(1,op));
+ var th=-p*25*Math.PI/180,ct=Math.cos(th),sn=Math.sin(th),px=-pmx*30,py=-pmy*20;
+ if(init){init=false;exT=NOW;MP.forEach(function(q){q.x=Math.random()*W;q.y=Math.random()*H;q.w=NOW+Math.random()*1.3})}
+ x.globalCompositeOperation='lighter';var bk=-1,sz=.55+ms*.42;
+ for(var m=0;m<MP.length;m++){var q=MP[m],ra=q.a*ct-q.b*sn,rb=q.a*sn+q.b*ct,X=cx-ms*ra+px,Y=cy+ms*rb+py,aw=NOW>=q.w;
+  if(aw){q.vx=(q.vx+(X-q.x)*.06)*.84;q.vy=(q.vy+(Y-q.y)*.06)*.84}else{q.vx*=.985;q.vy*=.985}
+  q.x+=q.vx;q.y+=q.vy;if(q.bk!==bk){bk=q.bk;x.fillStyle=pal[bk]}x.globalAlpha=op;var z2=q.r*sz*(.85+.3*Math.sin(NOW*2+q.ph));x.fillRect(q.x-z2/2,q.y-z2/2,z2,z2)}
  if(ring.a>.02){x.globalAlpha=ring.a;x.strokeStyle='#F6E3B0';x.lineWidth=2.5;x.beginPath();x.arc(cx,cy,ring.r,0,6.283);x.stroke();ring.r+=16;ring.a*=.95}
- for(var j=B.length-1;j>=0;j--){var q=B[j];q.x+=q.vx;q.y+=q.vy;q.vx*=.965;q.vy*=.965;q.l-=.016;if(q.l<=0){B.splice(j,1);continue}x.globalAlpha=q.l;x.fillStyle=q.g?'#F6E3B0':'#fff';x.beginPath();x.arc(q.x,q.y,1+q.l*2.2,0,6.283);x.fill()}
+ for(var j=B.length-1;j>=0;j--){var q2=B[j];q2.x+=q2.vx;q2.y+=q2.vy;q2.vx*=.965;q2.vy*=.965;q2.l-=.016;if(q2.l<=0){B.splice(j,1);continue}x.globalAlpha=q2.l;x.fillStyle=q2.g?'#F6E3B0':'#fff';x.beginPath();x.arc(q2.x,q2.y,1+q2.l*2.2,0,6.283);x.fill()}
  x.globalCompositeOperation='source-over';
  var sg=p*2,k0=Math.min(1,Math.floor(sg)),t=Math.min(1,sg-k0),c0=CL[k0],c1=CL[k0+1],cc=c0.map(function(v,i){return Math.round(v+(c1[i]-v)*t)});vs.style.setProperty('--vc','rgb('+cc.join(',')+')');
- var ms=.2+Math.pow(p,1.35)*1.75,op=p<.04?p*25:1-Math.max(0,p-.9)*8;op=Math.max(0,Math.min(1,op));
- mo.style.opacity=innerWidth<700?op*.4:op;mo.style.transform='translate('+(-pmx*30)+'px,'+(-pmy*20)+'px) scale('+(-ms)+','+ms+') rotate('+(p*-25)+'deg)';
- ob.style.opacity=op*.9;ob.style.transform='scale('+(.45+p*1.5)+')';ry.style.opacity=Math.min(1,op*(.25+p*1.1));
+ var asm=Math.max(0,Math.min(1,(NOW-exT-1.3)/1));
+ mo.style.opacity=(innerWidth<700?.5:1)*op*(.05+.17*asm);mo.style.transform='translate('+px+'px,'+py+'px) scale('+(-ms)+','+ms+') rotate('+(p*-25)+'deg)';
+ ob.style.opacity=op*.9;ob.style.transform='scale('+(.45+p*1.5)+')';ry.style.opacity=Math.min(1,op*(.25+p*1.1))*(.45+.55*asm);
  vsc.style.transform='translate('+(-pmx*22)+'px,'+(-pmy*14)+'px)';
  fl.style.opacity=Math.max(0,1-Math.abs(p-.955)/.045)*.7;
  var k=p<.3333?0:p<.6667?1:2;
- if(k!==on){if(on>-1)burst();on=k;st.forEach(function(e,j){e.classList.toggle('on',j===k)});sc.forEach(function(e,j){e.classList.toggle('on',j===k)});dots.forEach(function(e,j){e.classList.toggle('on',j===k)})}
+ if(k!==on){if(on>-1)burst(NOW);on=k;st.forEach(function(e,j){e.classList.toggle('on',j===k)});sc.forEach(function(e,j){e.classList.toggle('on',j===k)});dots.forEach(function(e,j){e.classList.toggle('on',j===k)})}
  var lp=Math.min(1,Math.max(0,(p-k/3)*3));dots.forEach(function(e,j){e.firstChild.style.setProperty('--sp',j<k?1:j===k?lp:0)});
  requestAnimationFrame(f)}
 new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)requestAnimationFrame(f)},{rootMargin:'200px'}).observe(sec);
