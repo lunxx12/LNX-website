@@ -6,6 +6,7 @@
 <title>LNX | Páginas web, menús digitales y automatización para negocios locales en Jalisco</title>
 <meta name="description" content="LNX crea páginas web, menús digitales, perfiles de Google y sistemas de citas y pedidos por WhatsApp para negocios locales en Jalisco. Cotiza sin compromiso.">
 <meta name="theme-color" content="#0E1430">
+<script>try{if(sessionStorage.getItem("lnx"))document.documentElement.className="nosp";else sessionStorage.setItem("lnx","1")}catch(e){}</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="LNX | Software y presencia digital para negocios locales">
 <meta property="og:description" content="Páginas web, menús digitales y automatización por WhatsApp para negocios locales.">
@@ -51,7 +52,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(14,20,48,.92);backdrop-f
 .mb{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
 @media(max-width:820px){.mb{display:block}.nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--night);border-bottom:1px solid var(--line);flex-direction:column;padding:16px 24px 24px;gap:16px;align-items:flex-start}.nav ul.open{display:flex}}
 /* hero */
-.hero{padding:72px 0 88px;overflow:hidden}
+.hero{padding:72px 0 160px;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .tag{display:inline-block;border:1px solid var(--line);color:var(--gold);padding:6px 14px;border-radius:99px;font-size:.9rem;margin-bottom:22px}
 .hero p.sub{font-size:1.15rem;margin:22px 0 34px;color:var(--txt)}
@@ -159,7 +160,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);fo
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 footer a{text-decoration:none}footer a:hover{color:var(--gold)}
-.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px #000;text-decoration:none}
+.wi{width:1.15em;height:1.15em;flex:none;vertical-align:middle}.wa .wi{width:32px;height:32px}.chip .wi{width:24px;height:24px}.facts .wi,.ways .wi{width:24px;height:24px;color:var(--gold)}.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px #000;text-decoration:none}
 
 /* animaciones */
 #pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:40}
@@ -213,7 +214,7 @@ h2.v::after{width:110px}
 
 /* v4: teléfono y división curva */
 .tilt{position:relative}
-.phone{position:absolute;left:-34px;bottom:-40px;width:172px;aspect-ratio:9/18.5;border-radius:26px;background:#0A0F24;border:3px solid #2A3566;box-shadow:0 30px 60px -20px #000,0 0 0 1px rgba(201,169,106,.35);padding:12px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;animation:fl3 7s ease-in-out infinite}
+.phone{position:absolute;left:-64px;bottom:-130px;width:150px;aspect-ratio:9/18.5;border-radius:26px;background:#0A0F24;border:3px solid #2A3566;box-shadow:0 30px 60px -20px #000,0 0 0 1px rgba(201,169,106,.35);padding:12px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;animation:fl3 7s ease-in-out infinite}
 @keyframes fl3{50%{transform:translateY(-10px)}}
 .phone::before{content:'';position:absolute;top:6px;left:50%;width:44px;height:5px;margin-left:-22px;border-radius:9px;background:#1B2347}
 .ph-top{display:flex;align-items:center;gap:6px;margin-top:10px;padding-bottom:8px;border-bottom:1px solid var(--line);font-size:10px;color:#fff}
@@ -227,14 +228,61 @@ h2.v::after{width:110px}
 .bub.ok .msr{font-size:18px;color:var(--gold);grid-row:span 2}.bub.ok small{color:var(--mute);font-size:8.5px}
 @keyframes bub{0%{opacity:0;transform:translateY(8px)}5%,86%{opacity:1;transform:none}96%,100%{opacity:0}}
 .chip{position:absolute;width:46px;height:46px;border-radius:14px;background:rgba(23,31,66,.85);border:1px solid var(--line);backdrop-filter:blur(6px);display:grid;place-items:center;color:var(--gold);box-shadow:0 14px 30px -12px #000;animation:fl3 6s ease-in-out infinite}
-.chip.c1{right:-14px;top:-18px}.chip.c2{right:-22px;top:42%;animation-delay:-2s}.chip.c3{right:18%;bottom:-26px;animation-delay:-4s}.chip.c4{left:30%;top:-24px;animation-delay:-1s}
+.chip.c1{right:-14px;top:-18px}.chip.c2{right:-22px;top:42%;animation-delay:-2s}.chip.c3{right:12%;bottom:-30px;animation-delay:-4s}.chip.c4{left:30%;top:-24px;animation-delay:-1s}
 @media(max-width:900px){.phone{left:8px;bottom:-30px;width:128px;border-radius:20px;padding:10px 8px}.bub{font-size:8px}.chip{display:none}.hero{padding-bottom:110px}}
 .wv{background:var(--mist);line-height:0;margin-top:-1px}
 .wv svg{display:block;width:100%;height:clamp(46px,7vw,100px)}
-@media(prefers-reduced-motion:reduce){.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+
+/* v5: servicios en órbita y detalles */
+.svc{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.orb{position:relative;width:100%;max-width:560px;aspect-ratio:1;margin:0 auto}
+.ring{position:absolute;inset:11%;border-radius:50%;border:1px dashed #3A4780;animation:spin 70s linear infinite}
+.hub{position:absolute;left:50%;top:50%;width:26%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E2850,var(--night));border:1px solid var(--line);display:grid;place-items:center;align-content:center;gap:6px;box-shadow:0 0 50px -10px rgba(201,169,106,.4)}
+.hub .cr{width:34px;height:34px;box-shadow:inset -11px 3px 0 0 var(--gold)}.hub small{font:700 .9rem 'Space Grotesk';color:#fff;letter-spacing:.12em}
+.beam{position:absolute;left:50%;top:50%;width:38%;height:2px;transform-origin:0 50%;transform:rotate(var(--a,-90deg));background:linear-gradient(90deg,transparent 30%,var(--gold));transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:96px;display:flex;flex-direction:column;align-items:center;gap:7px;background:none;border:0;color:var(--txt);cursor:pointer;font:500 .78rem/1.2 Inter,sans-serif;text-align:center}
+.node .ic{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:1px solid var(--line);color:var(--gold);transition:transform .3s,background .3s,box-shadow .3s}
+.node:hover .ic{transform:scale(1.1);border-color:var(--gold)}
+.node.on .ic{background:linear-gradient(135deg,#EBD296,#B8944D);color:var(--night);transform:scale(1.15);box-shadow:0 0 0 6px rgba(201,169,106,.18),0 0 30px rgba(201,169,106,.5);animation:pu2 2.4s infinite}
+.node.on{color:#fff}
+@keyframes pu2{50%{box-shadow:0 0 0 12px rgba(201,169,106,.05),0 0 34px rgba(201,169,106,.6)}}
+.det{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:34px;min-height:430px}
+.det.sw{animation:swp .45s ease}
+@keyframes swp{from{opacity:0;transform:translateY(12px)}}
+.det .di{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:rgba(201,169,106,.14);color:var(--gold);margin-bottom:18px}
+.det h3{font-size:1.7rem;margin-bottom:6px}.det .pt{color:var(--gold);font-weight:500;margin-bottom:14px}
+.det ul{list-style:none;padding:0;margin:20px 0;display:grid;gap:9px}
+.det li{display:flex;gap:10px;font-size:.96rem}.det li .msr{color:var(--gold);font-size:20px}
+.det .wh{color:var(--mute);font-size:.9rem;margin-bottom:22px}
+@media(max-width:900px){.svc{grid-template-columns:1fr;gap:28px}.orb{aspect-ratio:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 6px}.ring,.beam,.hub{display:none}.node{position:static;left:auto;top:auto;transform:none;width:auto}.det{min-height:0;padding:26px}}
+@media(max-width:480px){.orb{grid-template-columns:repeat(2,1fr)}}
+/* v5: más animaciones */
+.nav a.l{position:relative;transition:color .2s}.nav a.l::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--gold);transition:width .3s}.nav a.l.on{color:var(--gold)}.nav a.l.on::after,.nav a.l:hover::after{width:100%}
+details[open] p{animation:swp .35s ease}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,169,106,.2)}
+input,select,textarea{transition:border-color .2s,box-shadow .2s}
+.plan.hot{animation:hg 4s ease-in-out infinite}@keyframes hg{50%{box-shadow:0 0 40px -6px rgba(201,169,106,.5)}}
+.facts .msr,.facts .wi{animation:fl3 5s ease-in-out infinite}
+.proj .shot{clip-path:inset(0 100% 0 0);transition:clip-path 1.1s cubic-bezier(.6,0,.2,1),border-color .3s}.proj.v .shot{clip-path:inset(0)}
+.steps li.v::before{animation:pop .6s .3s both}@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+
+/* v6: intro con la luna y luz que sigue al mouse */
+.splash{position:fixed;inset:0;z-index:200;background:var(--night);display:grid;place-items:center;animation:sp .45s 1.05s ease forwards}
+.splash svg{width:130px;filter:drop-shadow(0 0 26px rgba(201,169,106,.5))}
+.sm{fill:url(#mg);fill-opacity:0;stroke:#E2C58D;stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:dr .75s ease forwards,ff .4s .6s ease forwards}
+@keyframes dr{to{stroke-dashoffset:0}}@keyframes ff{to{fill-opacity:1}}@keyframes sp{to{opacity:0;visibility:hidden}}
+.nosp .splash{display:none}
+html:not(.nosp) .hero .in:nth-child(1){animation-delay:1.1s}html:not(.nosp) .hero .in:nth-child(2){animation-delay:1.22s}html:not(.nosp) .hero .in:nth-child(3){animation-delay:1.34s}html:not(.nosp) .hero .in:nth-child(4){animation-delay:1.46s}html:not(.nosp) .hero .frame{animation-delay:1.3s}
+.lit{position:relative}
+.lit::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .5s;background:radial-gradient(460px circle at var(--mx,50%) var(--my,50%),rgba(201,169,106,.14),rgba(201,169,106,.04) 45%,transparent 70%)}
+.lit:hover::before{opacity:1}
+.lit>.wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol></svg>
+<div class="splash" aria-hidden="true"><svg viewBox="0 0 200 200"><path class="sm" pathLength="1" d="M122.2 18.4 A86 86 0 1 0 154.9 161.7 A74 74 0 1 1 122.2 18.4 Z"/></svg></div>
 <div id="pg"></div>
 <header><div class="wrap nav">
   <a class="brand" href="#top" aria-label="LNX inicio"><img src="assets/images/logo-lnx-nuevo.png" alt="LNX" height="38" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20300%20100%22%20role=%22img%22%20aria-label=%22LNX%22%20xmlns:c2pa=%22http://c2pa.org/manifest%22%3E%3Cmetadata%3E%3Cc2pa:manifest%3EAAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjYmYwNTI3NC02MzYwLTQ1ZGEtYjhmZS1hZGRiZjAxMTc5MDIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaI3xxUcgoy7EC8N6VRn/eDYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4ODc1YWUwMy0yZDQyLTRmODItODViMy1lNGE0ZjE0ZmNhMGJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo1o3nf8E2MHQpHmOhn/2djwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggWsb8TSE/TsuA1bwwud3RLJNPzWvoQE6OPFHpBc3d7YGkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJJVGeisPgvnVkeE4RmSVjcAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBH/%2BJOMchHoF6wvByJlB2JDEoF1QBjXo3I2fOQuo3/MmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiZZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNiZjA1Mjc0LTYzNjAtNDVkYS1iOGZlLWFkZGJmMDExNzkwMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQwY2NmNzQ1LTUyOTItNDVmYy1iNTRmLTI4YjhlZDJiZTEzOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBaxvxNIT9Oy4DVvDC53dEsk0/Na%2BhATo48UekFzd3tgaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggpv/%2BF7Gxh0KIgImQ%2BRWIBdlF%2BGeWmJAIEWb2BLszMHqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggA5zctQe4EyZjacpTk%2BVHV2TAmP8WXO7PUtAPwAz6Okh0Y2xhaW1fZ2VuZXJhdG9yX2luZm%2BjZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj%2BOPEz5o%2BnMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1%2BUCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9%2B1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQP2RhGLOKs%2BYKUbYYwT2WBNdb4Z11k4/FQvi1kPQGxvMhd%2BydEtWAocARC9R4Sq2xApF/2sE5NGqyAwKaWU2%2B94=%3C/c2pa:manifest%3E%3C/metadata%3E%3Cdefs%3E%3ClinearGradient%20id=%22lg%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23F6E3B0%22/%3E%3Cstop%20offset=%22.5%22%20stop-color=%22%23C9A96A%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%238A6B2A%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%20fill=%22%23fff%22%3E%3Cpolygon%20points=%228,8%2034,8%2034,64%2074,64%2074,92%2020,92%208,80%22/%3E%3Cpolygon%20points=%2286,92%2086,8%20110,8%20134,56%20134,8%20158,8%20158,92%20134,92%20110,44%20110,92%22/%3E%3Cpolygon%20points=%22170,8%20196,8%20208,50%20196,92%20170,92%20184,50%22/%3E%3C/g%3E%3Cpath%20d=%22M264.3%209.8%20A42%2042%200%201%200%20276.7%2084.0%20A38%2038%200%201%201%20264.3%209.8%20Z%22%20fill=%22url(%23lg)%22/%3E%3C/svg%3E'"></a>
@@ -255,7 +303,7 @@ h2.v::after{width:110px}
     <h1 class="in">Que tus clientes te encuentren, te escriban y te pidan.</h1>
     <p class="sub in">Páginas web, menús digitales y sistemas de pedidos y citas para <span class="rot" id="rot">restaurantes</span>. Que te encuentren en Google, te escriban por WhatsApp y vendas más.</p>
     <div class="cta in">
-      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener"><span class="msr" aria-hidden="true">chat</span>Cotizar por WhatsApp</a>
+      <a class="btn p" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Cotizar por WhatsApp</a>
       <a class="btn s" href="#proyectos">Ver proyectos</a>
     </div>
   </div>
@@ -268,7 +316,7 @@ h2.v::after{width:110px}
 
 <div class="facts"><div class="wrap"><ul>
   <li><span class="msr" aria-hidden="true">schedule</span>Tu página lista en 7 a 10 días</li>
-  <li><span class="msr" aria-hidden="true">chat</span>Respuesta por WhatsApp el mismo día</li>
+  <li><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Respuesta por WhatsApp el mismo día</li>
   <li><span class="msr" aria-hidden="true">verified_user</span>Tu dominio y tu contenido son tuyos</li>
   <li><span class="msr" aria-hidden="true">location_on</span>Trabajamos con negocios de Jalisco</li>
 </ul></div></div>
@@ -285,24 +333,10 @@ h2.v::after{width:110px}
 </div></section>
 
 <section id="servicios"><div class="wrap">
-  <div class="head"><h2 class="rv">Lo que hacemos por tu negocio</h2><p>Empieza por lo básico y suma sistemas conforme crezcas.</p></div>
-  <div class="groups">
-    <div class="g rv"><h3>Presencia</h3><p>Que te vean y te reconozcan.</p><ul>
-      <li><span class="msr" aria-hidden="true">web</span><div><b>Páginas web a medida</b><span class="d">Landing pages, catálogos y sitios para tu negocio, rápidos y listos para celular.</span></div></li>
-      <li><span class="msr" aria-hidden="true">storefront</span><div><b>Perfil de Google Business</b><span class="d">Mapa, fotos, horarios y reseñas gestionadas para que te encuentren cerca.</span></div></li>
-      <li><span class="msr" aria-hidden="true">qr_code_2</span><div><b>QRs estratégicos</b><span class="d">Para pedir reseñas, abrir tu menú o escribirte con un escaneo.</span></div></li>
-      <li><span class="msr" aria-hidden="true">draw</span><div><b>Identidad de marca</b><span class="d">Logo, colores y material visual consistente.</span></div></li>
-    </ul></div>
-    <div class="g rv"><h3>Ventas y pedidos</h3><p>Que comprar sea fácil.</p><ul>
-      <li><span class="msr" aria-hidden="true">restaurant_menu</span><div><b>Menús digitales</b><span class="d">Con fotos y precios, fáciles de actualizar, accesibles con un QR en la mesa.</span></div></li>
-      <li><span class="msr" aria-hidden="true">shopping_bag</span><div><b>Pedidos por WhatsApp</b><span class="d">El cliente arma su pedido en la página y te llega listo por mensaje.</span></div></li>
-      <li><span class="msr" aria-hidden="true">inventory_2</span><div><b>Catálogo digital</b><span class="d">Tus productos y disponibilidad a la vista antes de que vayan a la tienda.</span></div></li>
-    </ul></div>
-    <div class="g rv"><h3>Automatización</h3><p>Que tu negocio atienda mientras trabajas.</p><ul>
-      <li><span class="msr" aria-hidden="true">event_available</span><div><b>Agenda de citas</b><span class="d">El cliente elige servicio y horario libre sin esperar tu respuesta.</span></div></li>
-      <li><span class="msr" aria-hidden="true">notifications_active</span><div><b>Recordatorios por WhatsApp</b><span class="d">Un aviso antes de la cita para reducir los clientes que no llegan.</span></div></li>
-      <li><span class="msr" aria-hidden="true">smart_toy</span><div><b>Atención automática 24/7</b><span class="d">Respuestas a horarios, ubicación, precios y formas de pago a cualquier hora.</span></div></li>
-    </ul></div>
+  <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Elige un servicio para ver qué incluye.</p></div>
+  <div class="svc">
+    <div class="orb" id="orb"><span class="ring" aria-hidden="true"></span><span class="beam" id="beam" aria-hidden="true"></span><div class="hub" aria-hidden="true"><span class="cr"></span><small>LNX</small></div><button class="node on" data-i="0" aria-pressed="true" style="--x:50.00%;--y:12.00%"><span class="ic"><span class="msr" aria-hidden="true">draw</span></span><span class="lb">Creación de marca</span></button><button class="node" data-i="1" aria-pressed="false" style="--x:76.87%;--y:23.13%"><span class="ic"><span class="msr" aria-hidden="true">web</span></span><span class="lb">Landing pages</span></button><button class="node" data-i="2" aria-pressed="false" style="--x:88.00%;--y:50.00%"><span class="ic"><span class="msr" aria-hidden="true">qr_code_2</span></span><span class="lb">QR personalizados</span></button><button class="node" data-i="3" aria-pressed="false" style="--x:76.87%;--y:76.87%"><span class="ic"><span class="msr" aria-hidden="true">storefront</span></span><span class="lb">Google Business</span></button><button class="node" data-i="4" aria-pressed="false" style="--x:50.00%;--y:88.00%"><span class="ic"><span class="msr" aria-hidden="true">restaurant_menu</span></span><span class="lb">Menús digitales</span></button><button class="node" data-i="5" aria-pressed="false" style="--x:23.13%;--y:76.87%"><span class="ic"><span class="msr" aria-hidden="true">shopping_bag</span></span><span class="lb">Pedidos por WhatsApp</span></button><button class="node" data-i="6" aria-pressed="false" style="--x:12.00%;--y:50.00%"><span class="ic"><span class="msr" aria-hidden="true">event_available</span></span><span class="lb">Citas y recordatorios</span></button><button class="node" data-i="7" aria-pressed="false" style="--x:23.13%;--y:23.13%"><span class="ic"><span class="msr" aria-hidden="true">smart_toy</span></span><span class="lb">Atención 24/7</span></button></div>
+    <article class="det" id="det" aria-live="polite"></article>
   </div>
 </div></section>
 
@@ -377,7 +411,7 @@ h2.v::after{width:110px}
     <h2 class="rv">Cuéntanos de tu negocio</h2>
     <p style="margin-top:16px">Respondemos el mismo día. La cotización es gratis y sin compromiso.</p>
     <ul class="ways">
-      <li><span class="msr" aria-hidden="true">chat</span><a href="https://wa.me/523323507197" target="_blank" rel="noopener">WhatsApp: 33 2350 7197</a></li>
+      <li><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg><a href="https://wa.me/523323507197" target="_blank" rel="noopener">WhatsApp: 33 2350 7197</a></li>
       <li><span class="msr" aria-hidden="true">mail</span><a href="mailto:lunxx12@gmail.com">lunxx12@gmail.com</a></li>
       <li><span class="msr" aria-hidden="true">location_on</span>Jalisco, México</li>
     </ul>
@@ -397,7 +431,7 @@ h2.v::after{width:110px}
   <nav><a href="terminos.html">Términos de servicio</a><a href="privacidad.html">Política de privacidad</a><a href="https://wa.me/523323507197">WhatsApp</a><!-- Agrega tus redes: Instagram, Facebook --></nav>
 </div></footer>
 
-<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><span class="msr" aria-hidden="true" style="font-size:30px">chat</span></a>
+<a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
 
 <script>
 document.getElementById('f').addEventListener('submit',function(e){
@@ -433,6 +467,27 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
  hr.addEventListener('mouseleave',function(){tl.style.transform=''});
 }
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){var wv=document.querySelector('.wv svg');if(wv&&wv.pauseAnimations)wv.pauseAnimations()}
+
+(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],o=document.getElementById('orb'),d=document.getElementById('det'),b=document.getElementById('beam'),ns=o.querySelectorAll('.node'),cur=-90,t=null,u=false;
+function show(i,sw){var s=SV[i];ns.forEach(function(n,k){n.classList.toggle('on',k==i);n.setAttribute('aria-pressed',k==i)});
+var a=-90+i*45,dl=((a-cur+540)%360)-180;cur+=dl;b.style.setProperty('--a',cur+'deg');
+d.innerHTML='<div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p>'+s.d+'</p><ul>'+s.b.map(function(x){return '<li><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('Hola LNX, me interesa: '+s.t)+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
+if(sw){d.classList.remove('sw');void d.offsetWidth;d.classList.add('sw')}}
+ns.forEach(function(n){n.addEventListener('click',function(){u=true;clearInterval(t);show(+n.dataset.i,true)})});
+show(0,false);var i=0;
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){if(u)return;i=(i+1)%SV.length;show(i,true)},6000);
+})();
+var spy=document.querySelectorAll('.nav a.l'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)spy.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+['servicios','proyectos','paquetes','nosotros'].forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
+
+if(matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ var LS=document.querySelectorAll('section:not(.light),footer'),ac=null,tx=0,ty=0,cx=0,cy=0;
+ LS.forEach(function(s){s.classList.add('lit');
+  s.addEventListener('mouseenter',function(e){ac=s;var r=s.getBoundingClientRect();cx=tx=e.clientX-r.left;cy=ty=e.clientY-r.top});
+  s.addEventListener('mousemove',function(e){var r=s.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top});
+  s.addEventListener('mouseleave',function(){if(ac===s)ac=null})});
+ (function f(){if(ac){cx+=(tx-cx)*.14;cy+=(ty-cy)*.14;ac.style.setProperty('--mx',cx+'px');ac.style.setProperty('--my',cy+'px')}requestAnimationFrame(f)})();
+}
 </script>
 </body>
 </html>
