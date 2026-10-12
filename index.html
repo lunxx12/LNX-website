@@ -431,7 +431,39 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
 .det.sw h3{animation:su .55s .05s both}.det.sw .pt{animation:su .55s .12s both}.det.sw .ds{animation:su .55s .18s both}
 .det.sw li{animation:su .5s calc(.25s + var(--k)*.08s) both}.det.sw .wh{animation:su .5s .62s both}.det.sw .btn{animation:su .5s .7s both}
 @keyframes su{from{opacity:0;transform:translateY(14px)}}
-@media(prefers-reduced-motion:reduce){.fs,.wheel::before{animation:none!important}.pl{animation:none!important}.rvw .w{opacity:1}.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
+
+/* v14: servicios con scrollytelling, formulario pulido y móvil */
+.sv{height:calc(100vh + 7*52vh);padding:0}
+.sv .sv-s{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-top:70px}
+.sv .sv-s>.wrap{width:100%}.sv .head{margin-bottom:26px}.sv .head p{margin-top:8px}
+.sv .wheel{height:clamp(380px,calc(100vh - 310px),600px);cursor:default}
+.sv .det{min-height:0}
+.sv-h{display:none;position:absolute;left:50%;bottom:20px;transform:translateX(-50%);align-items:center;gap:8px;color:var(--mute);font:500 .85rem Inter;transition:opacity .4s;pointer-events:none}
+.sv .sv-h{display:flex}.sv-h .msr{color:var(--gold);animation:bn 1.6s ease-in-out infinite}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes angm{to{--ang:360deg}}
+form#f{position:relative;overflow:hidden}
+form#f::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--ang),transparent 55%,#E2C58D 80%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:angm 7s linear infinite;pointer-events:none}
+.fp{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(154,163,199,.18)}.fp b{display:block;height:100%;width:0;background:linear-gradient(90deg,#B8944D,#F6E3B0);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+form#f>label,form#f>.btn,form#f>small{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+form#f.v>label,form#f.v>.btn,form#f.v>small{opacity:1;transform:none}
+form#f.v>label:nth-of-type(1){transition-delay:.1s}form#f.v>label:nth-of-type(2){transition-delay:.18s}form#f.v>label:nth-of-type(3){transition-delay:.26s}form#f.v>label:nth-of-type(4){transition-delay:.34s}form#f.v>label:nth-of-type(5){transition-delay:.42s}form#f.v>.btn{transition-delay:.5s}form#f.v>small{transition-delay:.58s}
+form#f.rv{transform:none}
+label{transition:color .25s}label:focus-within{color:var(--gold)}
+select.flash{animation:flh 1.3s}@keyframes flh{0%,60%{box-shadow:0 0 0 4px rgba(201,169,106,.55),0 0 30px rgba(201,169,106,.5)}100%{box-shadow:none}}
+form .btn{position:relative;overflow:visible}form .btn.ok{background:linear-gradient(135deg,#6BE29A,#25D366);border-color:#25D366;color:#06351B}
+.spk{position:absolute;left:50%;top:50%;width:7px;height:7px;border-radius:50%;background:#F6E3B0;box-shadow:0 0 10px #E2C58D;pointer-events:none;animation:spb .9s ease-out forwards}
+@keyframes spb{from{opacity:1;transform:translate(-50%,-50%)}to{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.3)}}
+.nx{list-style:none;padding:0;margin:44px 0 0;position:relative;display:grid;gap:30px;max-width:420px}
+.nx::before{content:'';position:absolute;left:14px;top:14px;bottom:14px;width:2px;background:linear-gradient(var(--gold),rgba(201,169,106,.15));transform:scaleY(0);transform-origin:top;transition:transform 1.4s .3s cubic-bezier(.3,.7,.2,1)}
+.nx.v::before{transform:scaleY(1)}
+.nx li{position:relative;padding-left:52px;opacity:0;transform:translateX(-14px);transition:opacity .7s,transform .7s;transition-delay:calc(.4s + var(--i)*.35s)}
+.nx.v li{opacity:1;transform:none}
+.nx li::before{content:counter(nx);counter-increment:nx;position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--panel);border:1.5px solid var(--gold);color:var(--gold);font:700 .85rem 'Space Grotesk';display:grid;place-items:center}
+.nx{counter-reset:nx}
+.nx b{display:block;color:#fff;font:600 1.05rem 'Space Grotesk'}.nx span{color:var(--mute);font-size:.93rem}
+@media(max-width:900px){.phone{position:relative;left:auto;bottom:auto;width:190px;margin:14px auto 0;zoom:.85}.hero{padding-bottom:90px}}
+@media(prefers-reduced-motion:reduce){form#f::before,.sv-h .msr{animation:none!important}form#f>label,form#f>.btn,form#f>small,.nx li{opacity:1!important;transform:none!important}.nx::before{transform:none}.fs,.wheel::before{animation:none!important}.pl{animation:none!important}.rvw .w{opacity:1}.splash{display:none}.proj .shot{clip-path:none}.node.on .ic,.plan.hot,.facts .msr,.facts .wi{animation:none!important}.bub{opacity:1!important}.phone,.chip{animation:none!important}.mt,.bm svg,.badge::before{animation:none!important}.rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero .in,.hero .frame{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -512,7 +544,7 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
   </div>
   <div class="vj-dots" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
 </div></section>
-<section id="servicios"><div class="wrap">
+<section id="servicios"><div class="sv-s"><div class="wrap">
   <div class="head"><h2>Lo que hacemos por tu negocio</h2><p>Gira la rueda y elige un servicio para ver qué incluye.</p></div>
   <div class="svc">
     <div class="wheel" id="wheel" tabindex="0" aria-label="Servicios">
@@ -521,7 +553,7 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
     </div>
     <article class="det" id="det" aria-live="polite"></article>
   </div>
-</div></section>
+</div><p class="sv-h" id="svh" aria-hidden="true"><span class="msr">keyboard_double_arrow_down</span>Sigue bajando</p></div></section>
 
 <section class="light" id="proceso"><div class="wrap">
   <h2 class="rv">Así trabajamos contigo</h2>
@@ -590,8 +622,9 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
       <li><span class="msr" aria-hidden="true">mail</span><a href="mailto:lunxx12@gmail.com">lunxx12@gmail.com</a></li>
       <li><span class="msr" aria-hidden="true">location_on</span>Jalisco, México</li>
     </ul>
+    <ol class="nx rv"><li style="--i:0"><b>Nos cuentas</b><span>Llenas el formulario o nos escribes por WhatsApp.</span></li><li style="--i:1"><b>Te proponemos</b><span>Recibes una propuesta clara para tu negocio.</span></li><li style="--i:2"><b>Empezamos</b><span>Con tu visto bueno, arrancamos tu proyecto.</span></li></ol>
   </div>
-  <form id="f">
+  <form id="f" class="rv"><div class="fp" aria-hidden="true"><b id="fpb"></b></div>
     <label>Tu nombre<input name="n" required autocomplete="name"></label>
     <label>Nombre de tu negocio<input name="b" autocomplete="organization"></label>
     <label>Tipo de negocio<select name="t"><option>Restaurante o cafetería</option><option>Tienda o comercio</option><option>Servicios (estética, taller, consultorio)</option><option>Otro</option></select></label>
@@ -611,15 +644,20 @@ header,header.sc{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-ins
 <a class="wa" href="https://wa.me/523323507197?text=Hola%20LNX%20%F0%9F%91%8B%0A%0AQuiero%20cotizar%20un%20proyecto%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
 
 <script>
-document.getElementById('f').addEventListener('submit',function(e){
-  e.preventDefault();var d=new FormData(this),L=['👋 *Hola LNX, quiero cotizar un proyecto.*',''];
+(function(){var ff=document.getElementById('f'),bt=ff.querySelector('button[type=submit]'),bh=bt.innerHTML,fpb=document.getElementById('fpb');
+function fp(){var k=0;['n','b','m'].forEach(function(x){if(ff.elements[x].value.trim())k++});fpb.style.width=(k/3*100)+'%'}ff.addEventListener('input',fp);
+ff.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(this),L=['👋 *Hola LNX, quiero cotizar un proyecto.*',''];
   L.push('*Nombre:* '+d.get('n').trim());
   if(d.get('b').trim())L.push('*Negocio:* '+d.get('b').trim());
   L.push('*Tipo de negocio:* '+d.get('t'),'*Me interesa:* '+d.get('s'));
   if(d.get('m').trim())L.push('','*Detalles:*',d.get('m').trim());
   L.push('','_Enviado desde la página web de LNX_');
   window.open('https://wa.me/523323507197?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
-});
+  bt.classList.add('ok');bt.innerHTML='<span class="msr" aria-hidden="true">check_circle</span>¡Listo! Abriendo WhatsApp…';fpb.style.width='100%';
+  for(var i=0;i<20;i++){var s=document.createElement('span'),an=Math.random()*6.283,di=50+Math.random()*90;s.className='spk';s.style.setProperty('--dx',Math.cos(an)*di+'px');s.style.setProperty('--dy',Math.sin(an)*di*.7+'px');bt.appendChild(s);setTimeout(function(el){el.remove()},1000,s)}
+  setTimeout(function(){bt.classList.remove('ok');bt.innerHTML=bh},3400)});
+var fs=document.getElementById('fs');if(fs)new MutationObserver(function(){}).observe(fs,{attributes:true});
+})();
 
 var h=document.querySelector('header'),pg=document.getElementById('pg');
 addEventListener('scroll',function(){h.classList.toggle('sc',scrollY>20);var m=document.documentElement.scrollHeight-innerHeight;pg.style.width=(m>0?scrollY/m*100:0)+'%'},{passive:true});
@@ -649,32 +687,38 @@ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
 }
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){var wv=document.querySelector('.wv svg');if(wv&&wv.pauseAnimations)wv.pauseAnimations()}
 
-(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],w=document.getElementById('wheel'),d=document.getElementById('det'),ct=document.getElementById('wct'),tr=document.getElementById('wtr'),pb=document.getElementById('wpb'),n=SV.length,cs=[],pos=0,tg=0,cur=-1,u=false,hov=false,dg=null,auto=0,vis=false,lt=0,W,H,R,sp,mx=0,my=0,tx=0,ty=0,moved=false,first=true,go0=true,rm=matchMedia('(prefers-reduced-motion:reduce)').matches,AC=['rgba(201,169,106,.24)','rgba(90,120,255,.2)','rgba(238,240,247,.14)'];
-SV.forEach(function(s,i){var c=document.createElement('button');c.type='button';c.className='wc c'+(i%3);c.setAttribute('aria-label',s.t);c.innerHTML='<span class="n">0'+(i+1)+'</span><span class="msr" aria-hidden="true">'+s.i+'</span><b>'+s.t+'</b><small>'+s.p+'</small>';c.addEventListener('click',function(){if(moved){moved=false;return}u=true;var dl=i-cur;dl-=n*Math.round(dl/n);tg=Math.round(pos)+dl});w.appendChild(c);cs.push(c)});
-function size(){var cw=w.clientWidth,ch=w.clientHeight;W=Math.min(430,cw*.72);H=W*.58;R=H*2.3;sp=R*.3665;cs.forEach(function(c){c.style.width=W+'px';c.style.height=H+'px'});tr.style.width=tr.style.height=(R*2)+'px';tr.style.left=(cw/2-2*R)+'px';tr.style.top=(ch/2-R)+'px'}
+(function(){var SV=[{"i": "draw", "t": "Creación de marca", "p": "Una identidad que se reconoce y se recuerda.", "d": "Logo, paleta, tipografías y material de publicidad para redes y papelería, con un estilo coherente en todo.", "b": ["Logo y variantes", "Paleta de colores y tipografías", "Diseños para redes y publicidad", "Guía de marca básica"], "w": "Negocios nuevos o que quieren verse más profesionales"}, {"i": "web", "t": "Landing pages", "p": "Tu página propia, lista para vender.", "d": "Una página hecha a tu medida, rápida y adaptada a celular, con botón de WhatsApp y todo lo que tu cliente necesita saber.", "b": ["Diseño personalizado", "Se ve bien en celular", "Botón de WhatsApp con mensaje armado", "Dominio y publicación incluidos"], "w": "Cualquier negocio local"}, {"i": "qr_code_2", "t": "QR personalizados", "p": "Un escaneo y tu cliente llega a donde quieres.", "d": "Códigos QR con tu marca para tu menú, tus reseñas, tu WhatsApp o tu página, listos para imprimir.", "b": ["Con tu logo y colores", "Para menú, reseñas o WhatsApp", "Archivos listos para imprimir", "Diseño de soportes y tarjetas"], "w": "Restaurantes, tiendas y servicios"}, {"i": "storefront", "t": "Google Business", "p": "Que te encuentren en el mapa cuando te buscan.", "d": "Creamos u optimizamos tu perfil de Google para que aparezcas en búsquedas y mapas cercanos, con información y fotos al día.", "b": ["Perfil completo y verificado", "Fotos, horarios y servicios", "QR para pedir reseñas", "Recomendaciones para subir posiciones"], "w": "Negocios con clientes de la zona"}, {"i": "restaurant_menu", "t": "Menús digitales", "p": "Tu menú siempre actualizado, en el celular de tus clientes.", "d": "Menú con fotos y precios que se abre con un QR en la mesa o desde un enlace, fácil de actualizar cuando cambian tus precios.", "b": ["Fotos y precios", "Acceso con QR", "Actualización sencilla", "Conexión con pedidos por WhatsApp"], "w": "Restaurantes, cafeterías y bares"}, {"i": "shopping_bag", "t": "Pedidos por WhatsApp", "p": "Pedidos claros, sin mensajes enredados.", "d": "El cliente arma su pedido en tu página y te llega ordenado por WhatsApp, listo para confirmar.", "b": ["Catálogo o menú con carrito", "Mensaje armado automáticamente", "Menos errores y preguntas repetidas", "Para entrega a domicilio o recoger"], "w": "Comida a domicilio y tiendas"}, {"i": "event_available", "t": "Citas y recordatorios", "p": "Agenda llena y menos clientes que no llegan.", "d": "Un calendario en línea donde tu cliente elige servicio y horario libre, con recordatorios por WhatsApp antes de la cita.", "b": ["Agenda en línea", "Horarios libres en tiempo real", "Recordatorios por WhatsApp", "Se cotiza según tu caso"], "w": "Estéticas, barberías, talleres y consultorios"}, {"i": "smart_toy", "t": "Atención 24/7", "p": "Responde por ti mientras trabajas.", "d": "Un asistente que contesta preguntas frecuentes por WhatsApp o redes: horarios, ubicación, precios y formas de pago.", "b": ["Respuestas a preguntas frecuentes", "Disponible a cualquier hora", "Te pasa los casos importantes", "Se cotiza según tu caso"], "w": "Negocios con muchos mensajes repetidos"}],w=document.getElementById('wheel'),sec=document.getElementById('servicios'),svh=document.getElementById('svh'),d=document.getElementById('det'),ct=document.getElementById('wct'),tr=document.getElementById('wtr'),pb=document.getElementById('wpb'),n=SV.length,cs=[],pos=0,tg=0,cur=-1,u=false,hov=false,dg=null,auto=0,vis=false,lt=0,W,H,R,sp,mx=0,my=0,tx=0,ty=0,moved=false,first=true,go0=true,pin=false,rm=matchMedia('(prefers-reduced-motion:reduce)').matches,AC=['rgba(201,169,106,.24)','rgba(90,120,255,.2)','rgba(238,240,247,.14)'];
+function setPin(){var np=!rm&&innerWidth>=900&&innerHeight>=640;if(np!==pin){pin=np;sec.classList.toggle('sv',pin)}}
+function prog(){var r=sec.getBoundingClientRect(),t=r.height-innerHeight;return t>0?Math.min(1,Math.max(0,-r.top/t)):0}
+function mag(f){var i=Math.floor(f);if(i>=n-1)return n-1;var s=Math.max(0,Math.min(1,(f-i-.28)/.44));s=s*s*(3-2*s);return i+s}
+function toIdx(i){i=Math.max(0,Math.min(n-1,i));var r=sec.getBoundingClientRect(),top=r.top+scrollY,t=r.height-innerHeight,y=top+(i/(n-1))*.9*t+1;if(window.__L)window.__L.scrollTo(y,{duration:1.3});else scrollTo({top:y,behavior:'smooth'})}
+SV.forEach(function(s,i){var c=document.createElement('button');c.type='button';c.className='wc c'+(i%3);c.setAttribute('aria-label',s.t);c.innerHTML='<span class="n">0'+(i+1)+'</span><span class="msr" aria-hidden="true">'+s.i+'</span><b>'+s.t+'</b><small>'+s.p+'</small>';c.addEventListener('click',function(){if(moved){moved=false;return}if(pin){toIdx(i);return}u=true;var dl=i-cur;dl-=n*Math.round(dl/n);tg=Math.round(pos)+dl});w.appendChild(c);cs.push(c)});
+function size(){setPin();var cw=w.clientWidth,ch=w.clientHeight;W=Math.min(430,cw*.72);H=W*.58;R=H*2.3;sp=R*.3665;cs.forEach(function(c){c.style.width=W+'px';c.style.height=H+'px'});tr.style.width=tr.style.height=(R*2)+'px';tr.style.left=(cw/2-2*R)+'px';tr.style.top=(ch/2-R)+'px'}
 function show(sw){var s=SV[cur];ct.textContent='0'+(cur+1)+' / 0'+n;d.style.setProperty('--ac',AC[cur%3]);
 d.innerHTML='<span class="bn">0'+(cur+1)+'</span><div class="di"><span class="msr" aria-hidden="true">'+s.i+'</span></div><h3>'+s.t+'</h3><p class="pt">'+s.p+'</p><p class="ds">'+s.d+'</p><ul>'+s.b.map(function(x,k){return '<li style="--k:'+k+'"><span class="msr" aria-hidden="true">check_circle</span>'+x+'</li>'}).join('')+'</ul><p class="wh">Ideal para: '+s.w+'</p><a class="btn p" href="https://wa.me/523323507197?text='+encodeURIComponent('👋 *Hola LNX*\n\nMe interesa el servicio de *'+s.t+'*.\n¿Me pueden dar más información y una cotización?')+'" target="_blank" rel="noopener">Cotizar este servicio</a>';
 if(sw){d.classList.remove('sw');void d.offsetWidth;d.classList.add('sw')}}
-function nav(k){u=true;tg=Math.round(tg)+k}
+function nav(k){if(pin){toIdx(cur+k);return}u=true;tg=Math.round(tg)+k}
 document.getElementById('wup').onclick=function(){nav(-1)};document.getElementById('wdn').onclick=function(){nav(1)};
 w.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();nav(1)}if(e.key==='ArrowUp'){e.preventDefault();nav(-1)}});
 w.addEventListener('mouseenter',function(){hov=true});w.addEventListener('mouseleave',function(){hov=false;mx=my=0});
 w.addEventListener('pointermove',function(e){var r=w.getBoundingClientRect();mx=Math.max(-1,Math.min(1,(e.clientX-r.left-r.width/2)/(W/2)));my=Math.max(-1,Math.min(1,(e.clientY-r.top-r.height/2)/(H/2)))});
-w.addEventListener('pointerdown',function(e){if(e.target.closest('.wctl'))return;dg={x:e.clientX,y:e.clientY,p0:pos,lp:pos,lv:0,tc:e.pointerType==='touch'};moved=false});
+w.addEventListener('pointerdown',function(e){if(pin||e.target.closest('.wctl'))return;dg={x:e.clientX,y:e.clientY,p0:pos,lp:pos,lv:0,tc:e.pointerType==='touch'};moved=false});
 addEventListener('pointermove',function(e){if(!dg)return;var dd=dg.tc?(dg.x-e.clientX):(dg.y-e.clientY);if(Math.abs(dd)>6)moved=true;if(moved){pos=dg.p0+dd/sp;tg=pos;u=true;dg.lv=pos-dg.lp;dg.lp=pos}});
 addEventListener('pointerup',function(){if(!dg)return;if(moved)tg=Math.round(pos+dg.lv*9);dg=null});
 function tick(t){if(!vis)return;var dt=Math.min(50,t-lt||16);lt=t;
- if(!dg){pos+=(tg-pos)*(rm?1:.11);if(Math.abs(tg-pos)<.0008)pos=tg}
- if(!u&&!hov&&!dg&&!rm){auto+=dt;if(auto>=5200){auto=0;tg=Math.round(tg)+1}}
- pb.style.width=(u?0:auto/52)+'%';tx+=(mx-tx)*.1;ty+=(my-ty)*.1;
+ if(pin){var pp=prog();tg=mag(Math.min(1,pp/.9)*(n-1));svh.style.opacity=pp>.93?0:1;pb.style.width=(pp*100)+'%'}
+ else if(!u&&!hov&&!dg&&!rm){auto+=dt;if(auto>=5200){auto=0;tg=Math.round(tg)+1}}
+ if(!pin)pb.style.width=(u?0:auto/52)+'%';
+ if(!dg||pin){pos+=(tg-pos)*(rm?1:.12);if(Math.abs(tg-pos)<.0008)pos=tg}
+ tx+=(mx-tx)*.1;ty+=(my-ty)*.1;
  var rp=Math.round(pos),c0=((rp%n)+n)%n;if(c0!==cur){cur=c0;show(!first);first=false}
  for(var i=0;i<n;i++){var c=cs[i],o=i-pos;o-=n*Math.round(o/n);var ab=Math.abs(o),a=o*21,r=a*Math.PI/180,act=ab<.5,
   tf='translate(-50%,-50%) translate('+(-R*(1-Math.cos(r))).toFixed(1)+'px,'+(R*Math.sin(r)+(act&&!rm?Math.sin(t/900)*3:0)).toFixed(1)+'px) rotate('+a.toFixed(2)+'deg) scale('+(1-Math.min(ab,3)*.045).toFixed(3)+')';
   if(ab<1){var k=1-ab;tf+=' perspective(900px) rotateX('+(-ty*7*k).toFixed(2)+'deg) rotateY('+(tx*9*k).toFixed(2)+'deg)';c.style.setProperty('--gx',(50+tx*42)+'%');c.style.setProperty('--gy',(50+ty*42)+'%')}
   c.style.transform=tf;c.style.opacity=ab>3.3?0:Math.max(0,1-Math.max(0,ab-.6)*.2).toFixed(3);c.style.filter=ab>1.3?'blur('+((ab-1.3)*1.3).toFixed(2)+'px)':'none';c.style.zIndex=50-Math.round(ab*10);c.style.pointerEvents=ab>3?'none':'auto';c.classList.toggle('on',act);c.tabIndex=act?0:-1}
  tr.style.transform='rotate('+(-pos*21)+'deg)';requestAnimationFrame(tick)}
-size();addEventListener('resize',size);
-new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis){if(go0){go0=false;if(!rm)pos=-3.2}requestAnimationFrame(tick)}},{threshold:.15}).observe(w);
+size();addEventListener('resize',size);addEventListener('load',size);
+new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis){size();if(go0){go0=false;if(!rm)pos=-3.2}requestAnimationFrame(tick)}},{threshold:.1}).observe(w);
 })();
 var spy=document.querySelectorAll('.nav a.l'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)spy.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
 ['servicios','proyectos','paquetes','nosotros'].forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
@@ -692,12 +736,12 @@ if(matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:red
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function up(){ps.forEach(function(p){var r=p.getBoundingClientRect(),v=innerHeight,pr=Math.min(1,Math.max(0,(v*.9-r.top)/(v*.5+r.height*.6))),ws=p.querySelectorAll('.w'),k=Math.round(pr*ws.length);ws.forEach(function(w,i){w.classList.toggle('on',rm||i<k)})})}
 addEventListener('scroll',up,{passive:true});addEventListener('resize',up);up()})();
-addEventListener('load',function(){if(window.Lenis&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var L=new Lenis({lerp:.1});(function r(t){L.raf(t);requestAnimationFrame(r)})();
+addEventListener('load',function(){if(window.Lenis&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var L=new Lenis({lerp:.1});window.__L=L;(function r(t){L.raf(t);requestAnimationFrame(r)})();
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();L.scrollTo(id,{offset:-80})}})})}});
 
 (function(){var fs=document.getElementById('fs'),pl=document.querySelectorAll('.plan[data-pkg]');
 function mark(v){pl.forEach(function(p){var on='Paquete '+p.dataset.pkg===v;p.classList.toggle('sel',on);p.querySelector('.pk').textContent=on?'Paquete elegido':'Elegir este paquete'})}
-pl.forEach(function(p){p.querySelector('.pk').addEventListener('click',function(){fs.value='Paquete '+p.dataset.pkg;mark(fs.value)})});
+pl.forEach(function(p){p.querySelector('.pk').addEventListener('click',function(){fs.value='Paquete '+p.dataset.pkg;mark(fs.value);fs.classList.remove('flash');void fs.offsetWidth;fs.classList.add('flash')})});
 fs.addEventListener('change',function(){mark(fs.value)})})();
 
 (function(){var sec=document.getElementById('viaje');if(!sec)return;
@@ -715,7 +759,7 @@ for(var i=0,nb=innerWidth<700?80:220;i<nb;i++)BG.push({x:Math.random(),y:Math.ra
 (function(){var o=document.createElement('canvas');o.width=o.height=200;var q=o.getContext('2d');q.fillStyle='#000';q.beginPath();q.arc(95,100,86,0,6.2832);q.fill();q.globalCompositeOperation='destination-out';q.beginPath();q.arc(130,92,74,0,6.2832);q.fill();
  var d=q.getImageData(0,0,200,200).data;function A(i,j){return i<0||j<0||i>199||j>199?0:d[(j*200+i)*4+3]}
  function add(i,j){MP.push({a:(i-100)/200*M0,b:(j-100)/200*M0,x:0,y:0,vx:0,vy:0,w:0,r:1.1+Math.random()*1.5,ph:Math.random()*6.3,bk:Math.max(0,Math.min(5,Math.floor((i+j)/400*6)))})}
- var st=innerWidth<700?3.3:1.9;for(var j=0;j<200;j+=st)for(var i=0;i<200;i+=st){var a=i+(Math.random()-.5)*st,b=j+(Math.random()-.5)*st;if(A(a|0,b|0)>128)add(a,b)}
+ var st=innerWidth<700?3.1:1.65;for(var j=0;j<200;j+=st)for(var i=0;i<200;i+=st){var a=i+(Math.random()-.5)*st,b=j+(Math.random()-.5)*st;if(A(a|0,b|0)>128)add(a,b)}
  for(var j2=0;j2<200;j2++)for(var i2=0;i2<200;i2++){if(A(i2,j2)>128&&(A(i2+2,j2)<128||A(i2-2,j2)<128||A(i2,j2+2)<128||A(i2,j2-2)<128)&&Math.random()<.22)add(i2,j2)}
  MP.sort(function(a,b){return a.bk-b.bk})})();
 sec.addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
@@ -730,7 +774,7 @@ function f(tt){if(!vis)return;var NOW=tt/1000,np=prog();sp=sp*.85+(np-np0)*.15;n
  var ms=.2+Math.pow(p,1.35)*1.75,op=p<.04?p*25:1-Math.max(0,p-.9)*8;op=Math.max(0,Math.min(1,op));
  var th=-p*25*Math.PI/180,ct=Math.cos(th),sn=Math.sin(th),px=-pmx*30,py=-pmy*20;
  if(init){init=false;exT=NOW;MP.forEach(function(q){q.x=Math.random()*W;q.y=Math.random()*H;q.w=NOW+Math.random()*1.3})}
- x.globalCompositeOperation='lighter';var bk=-1,sz=.55+ms*.42;
+ x.globalCompositeOperation='lighter';var bk=-1,sz=.9+ms*.55;
  for(var m=0;m<MP.length;m++){var q=MP[m],ra=q.a*ct-q.b*sn,rb=q.a*sn+q.b*ct,X=cx-ms*ra+px,Y=cy+ms*rb+py,aw=NOW>=q.w;
   if(aw){q.vx=(q.vx+(X-q.x)*.06)*.84;q.vy=(q.vy+(Y-q.y)*.06)*.84}else{q.vx*=.985;q.vy*=.985}
   q.x+=q.vx;q.y+=q.vy;if(q.bk!==bk){bk=q.bk;x.fillStyle=pal[bk]}x.globalAlpha=op;var z2=q.r*sz*(.85+.3*Math.sin(NOW*2+q.ph));x.fillRect(q.x-z2/2,q.y-z2/2,z2,z2)}
@@ -739,7 +783,7 @@ function f(tt){if(!vis)return;var NOW=tt/1000,np=prog();sp=sp*.85+(np-np0)*.15;n
  x.globalCompositeOperation='source-over';
  var sg=p*2,k0=Math.min(1,Math.floor(sg)),t=Math.min(1,sg-k0),c0=CL[k0],c1=CL[k0+1],cc=c0.map(function(v,i){return Math.round(v+(c1[i]-v)*t)});vs.style.setProperty('--vc','rgb('+cc.join(',')+')');
  var asm=Math.max(0,Math.min(1,(NOW-exT-1.3)/1));
- mo.style.opacity=(innerWidth<700?.5:1)*op*(.05+.17*asm);mo.style.transform='translate('+px+'px,'+py+'px) scale('+(-ms)+','+ms+') rotate('+(p*-25)+'deg)';
+ mo.style.opacity=(innerWidth<700?.5:1)*op*(.08+.24*asm);mo.style.transform='translate('+px+'px,'+py+'px) scale('+(-ms)+','+ms+') rotate('+(p*-25)+'deg)';
  ob.style.opacity=op*.9;ob.style.transform='scale('+(.45+p*1.5)+')';ry.style.opacity=Math.min(1,op*(.25+p*1.1))*(.45+.55*asm);
  vsc.style.transform='translate('+(-pmx*22)+'px,'+(-pmy*14)+'px)';
  fl.style.opacity=Math.max(0,1-Math.abs(p-.955)/.045)*.7;
